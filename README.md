@@ -138,7 +138,7 @@ _________________________________________
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
 Instead, the aggregation is handled directly by Python scripts, which can generate aggregated CSV files very quickly.
-For Py coding questions or help, visit https://chatgpt.com.
+For coding questions or help, visit https://chatgpt.com.
 
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
