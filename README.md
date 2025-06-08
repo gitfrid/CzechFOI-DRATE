@@ -61,6 +61,22 @@ ________________________________________
 
 _________________________________________
 
+### E) Death risk by age over time
+
+<br>Phyton script [E) death risk by age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/E%29%20death%20risk%20by%20age.py) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20vx_uvx_death_risk_by_age.html)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20no%20bias%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
+<br>
+
+_________________________________________
+
 
 ### Software Requirements:
 
