@@ -1,7 +1,7 @@
 # CzechFOI-DRATE
 CzechFOI-DRATE
 
-**CzechFOI Investigation how to prevent bias by spilting vaccinated (VX) and unvaccinated (UVX) groups in real world data**
+**CzechFOI Investigation how to minimize bias by spilting vaccinated (VX) and unvaccinated (UVX) groups in real world data**
 
 <br>
 
