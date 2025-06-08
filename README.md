@@ -6,6 +6,25 @@ CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data in
 **Hypothesis:
 It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. This remains true even if both groups have the same homogen individual death rates.**
 
+<br>
+_________________________________________
+
+### When comparing different methods, Cox PH seemed to calculate the best approximation
+
+<br>Phyton script [W) coxph real deaths real vax dates by age](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.py)
+<br>
+
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.png width="1280" height="auto">
+<br>
+
+[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.html)
+
+To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20no%20bias%20sim%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
+<br>
 
 _________________________________________
 
