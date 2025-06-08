@@ -1,0 +1,7 @@
+create this file with the script: "C:\github\CzechFOI-DRATE\Py Scripts\ND) generate csv simulate deaths hazard no bias .py"
+
+Prerequisite: "C:\github\CzechFOI-DRATE\TERRA\sim_Vesely_106_202403141131.csv" must be present.
+
+Download from:
+https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz
+https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/

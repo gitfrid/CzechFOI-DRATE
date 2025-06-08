@@ -1,0 +1,16 @@
+The Czech Data was releasd after a freedom of information request.
+The zipped Vesely_106_202403141131.tar.xz fiel size is about 56 MB.
+
+Vesely_106_202403141131.csv Download from:
+https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/Vesely_106_202403141131.tar.xz
+https://github.com/PalackyUniversity/uzis-data-analysis/blob/main/data/
+
+This Script do not need SQLite Querys to aggregate the 11 million individual data rows!
+Instead all is done by phyton scripts, and it is faster then by SQLite!
+  
+
+
+
+ 
+
+

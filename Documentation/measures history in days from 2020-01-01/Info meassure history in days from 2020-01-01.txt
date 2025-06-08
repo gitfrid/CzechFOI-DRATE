@@ -1,0 +1,54 @@
+https://x.com/denisrancourt/status/1915417543298125997
+
+Neuropathie
+https://x.com/HansMahncke/status/1872438792352891386
+
+
+
+'https://www.worldometers.info/coronavirus/country/czech-republic/#graph-deaths-daily
+'https://de.wikipedia.org/wiki/COVID-19-Pandemie_in_Tschechien
+'https://vlada.gov.cz/en/media-centrum/aktualne/measures-adopted-by-the-czech-government-against-coronavirus-180545/
+
+CASES:
+
+days from 01.01.2020	
+
+372	vax
+266	
+492	
+	
+644	
+731	peak cases
+757	peak cases
+855	
+	
+909	
+1042	
+
+
+DEATHs:	
+	
+372	vax introduced
+	
+
+99	start wave
+309	peak
+373	peak
+433	peak
+517	end wave
+	
+	
+639	start 2nd wave
+671	peak
+774	peak
+862	end  2nd wave
+	
+941	Peak 3d wave
+1016	
+1088	
+	
+	
+278	emergency measures
+361	emergency measures + Vax Introduced
+397	emergency measures
+466	emergency measures

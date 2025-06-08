@@ -1,0 +1,31 @@
+SCRIPT A – Aggregate Raw Daily Data by Age Group and Vaccination Status
+
+This script replaces the need for SQLite-based aggregation by directly processing the raw data into daily summaries, making it faster and easier to use.
+
+Main Functions:
+
+    Loads and cleans about 11 million individual-level records of deaths and vaccination Dates from Vesely_106_202403141131.csv
+
+    Calculates each person’s age at AGE_REFERENCE_DATE 01.01.2023, (Sart of Observation is START_DATE 01.01.2020).
+
+    Determines whether each person was vaccinated or unvaccinated at the time of death.
+
+    Generates the following daily tables as csv file (rows = days 0-1532, columns = ages 0–113):
+
+        Total deaths
+
+        Deaths among vaccinated individuals
+
+        Deaths among unvaccinated individuals
+
+        Total population per age group (static over time)
+
+        Daily count of newly vaccinated individuals (first dose)
+
+        Daily decrease in unvaccinated individuals (equal to daily new vaccinated, with negative sign)
+
+        Total administered doses and first doses (daily counts)
+
+Script location: C:\github\CzechFOI-DRATE\Py Scripts\A) generate aggregated csv files from CzechFOI.py
+All output tables are saved as CSV files to folder C:\github\CzechFOI-DRATE\TERRA\ for easy visualization or further analysis
+
