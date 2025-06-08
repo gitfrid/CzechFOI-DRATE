@@ -76,18 +76,14 @@ _________________________________________
 <br>
 
 _________________________________________
-### E) Death risk by age over time
+### J) Bias Study ratio vx_uvx.py
 
-<br>Phyton script [E) death risk by age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/E%29%20death%20risk%20by%20age.py) 
-<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20vx_uvx_death_risk_by_age.html)
+<br>Phyton script [J) Bias Study ratio vx_uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.png) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.html)
 <br>
+<br>This script simulates uniform death risk over time to test bias in survival analysis. It compares static vs. time-dependent vaccinated/unvaccinated classification, computes death rates and 1st derivatives, Kaplan-Meier curves, and Cox models, and visualizes the results in an interactive Plotly HTML plot.
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
-<br>
-<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
-<br> 
-<br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20no%20bias%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J)%20Bias%20study%20ratio%20vx%20uvx/J)%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.png width="1280" height="auto">
 <br>
 _________________________________________
 
