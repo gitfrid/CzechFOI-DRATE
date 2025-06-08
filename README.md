@@ -87,7 +87,7 @@ _________________________________________
 <br>
 _________________________________________
 
-### ZB) Hypergeometric (used by Charls Sanders Peirce) Vaccine Effectiveness Analysis with Confidence Intervals
+### ZB) Hypergeometric (used by Charles Sanders Peirce) Vaccine Effectiveness Analysis with Confidence Intervals
 
 <br>Phyton script [](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.png) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.html)
