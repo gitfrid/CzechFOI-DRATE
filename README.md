@@ -87,6 +87,21 @@ _________________________________________
 <br>
 _________________________________________
 
+### ZB) Hypergeometric (used by Charls Sanders Peirce) Vaccine Effectiveness Analysis with Confidence Intervals
+
+<br>Phyton script [](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.png) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.html)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB)%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20sim%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.png width="1280" height="auto">
+<br>
+_________________________________________
+
 ### Software Requirements:
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
