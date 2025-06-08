@@ -61,6 +61,23 @@ ________________________________________
 
 _________________________________________
 
+### B)  DeathRatesBy Age from aggregated
+
+<br>
+<br>This produces the same results as "ZF) vx uvx norm" above, but uses aggregated CSV files for the calculations.
+
+The aggregated CSV files were generated using the Python script: [A) generate aggregated csv files from CzechFOI.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/A%29%20generate%20aggregated%20csv%20files%20from%20CzechFOI.py) 
+<br>
+<br>The data is then plotted with the Python script: [B)  DeathRatesByAge from aggregated.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZF%29%20vx%20uvx%20norm.py) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20vx%20uvx%20norm.html)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/B)%20DeathRates%20byage%20from%20aggregated%20csvfiles/B)%20DeathRates%20PerAgeGroup.png width="1280" height="auto">
+<br>
+<br>
+
+_________________________________________
+
 ### E) Death risk by age over time
 
 <br>Phyton script [E) death risk by age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/E%29%20death%20risk%20by%20age.py) 
