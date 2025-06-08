@@ -1,5 +1,4 @@
 # CzechFOI-DRATE
-CzechFOI-DRATE
 
 CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data into two groups (vaccinated vx /unvaccinated uvx)
 <br>
