@@ -4,11 +4,24 @@ import plotly.graph_objs as go
 import plotly.subplots as sp
 from lifelines import KaplanMeierFitter, CoxPHFitter
 
+
+# Bias Study: Static vs. Time-Dependent Grouping in Survival Analysis
+
+# This script simulates death and vaccination events in a synthetic population to demonstrate
+# the bias introduced by static classification of vaccination status (immortal time bias).
+# It computes and compares death rates, Kaplan-Meier survival curves, and Cox model predictions
+# for vaccinated (VX) and unvaccinated (UVX) groups using both static and time-dependent grouping.
+
+# Generates an interactive Plotly HTML visualization showing:
+# - Death rates (static and time-dependent)
+# - Kaplan-Meier survival and hazard curves
+# - Cox model predicted survival and hazard rates
+
 # Simulation parameters
 np.random.seed(0)
-N = 400_000
-MAX_DAYS = 1095
-DEATH_PROB_PER_DAY = 0.001
+N = 400_000  # number of individuals
+MAX_DAYS = 1095  # observation period (3 years)
+DEATH_PROB_PER_DAY = 0.001  # constant daily death probability
 OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\J) Bias study ratio vx uvx\J) Bias study ratio over time  TimeDependend.html"
 
 # Simulate death day for each individual (or alive = NaN)
@@ -55,11 +68,13 @@ for day in range(MAX_DAYS):
         rate = deaths / at_risk if at_risk > 0 else 0
         records_static.append({"day": day, "group": group, "death_rate": rate, "type": "Static"})
 
+# Compute time-dependent death rates
 death_rates_td = df_long.groupby(["day", "group_td"])["death"].sum().unstack(fill_value=0)
 counts_td = df_long.groupby(["day", "group_td"]).size().unstack(fill_value=0)
 rates_td = (death_rates_td / counts_td).reset_index().melt(id_vars="day", var_name="group", value_name="death_rate")
 rates_td["type"] = "Time-dependent"
 
+# Combine both approaches for plotting
 df_static = pd.DataFrame(records_static)
 df_combined = pd.concat([df_static, rates_td], ignore_index=True)
 
