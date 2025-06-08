@@ -102,6 +102,21 @@ _________________________________________
 <br>
 _________________________________________
 
+### ZC) 
+
+<br>Phyton script [ZC) dowhy vaxcode doses vs total_death individual.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZC%29%20dowhy%20vaxcode%20doses%20vs%20total_death%20individual.py) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZC%29%20dowhy%20vaxcode%20doses%20vs%20totaldeath%20individual/ZC%29%20dowhy_vaxcode_doses_vs_deaths.html)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZC%29%20dowhy%20vaxcode%20doses%20vs%20totaldeath%20individual/ZC%29%20dowhy_vaxcode_doses_vs_deaths.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZC)%20dowhy%20vaxcode%20doses%20vs%20totaldeath%20individual/ZC)%20sim%20dowhy_vaxcode_doses_vs_deaths.png width="1280" height="auto">
+<br>
+_________________________________________
+
 ### Software Requirements:
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
