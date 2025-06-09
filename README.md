@@ -72,7 +72,7 @@ The aggregated CSV files were generated using the Python script: [A) generate ag
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20vx%20uvx%20norm.html)
 <br>
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/B)%20DeathRates%20byage%20from%20aggregated%20csvfiles/B)%20DeathRates%20PerAgeGroup.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/B%29%20DeathRates%20byage%20from%20aggregated%20csvfiles/B%29%20DeathRates%20PerAgeGroup.png width="1280" height="auto">
 <br>
 <br>
 
@@ -138,6 +138,7 @@ _________________________________________
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
 Instead, the aggregation is handled directly by Python scripts, which can generate aggregated CSV files very quickly.
+For coding questions or help, visit https://chatgpt.com.
 
 - [Python 3.12.5](https://www.python.org/downloads/) to run the scripts.
 - [Visual Studio Code 1.92.2](https://code.visualstudio.com/download) to edit and run scripts.
