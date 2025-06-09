@@ -4,13 +4,13 @@ import plotly.graph_objects as go
 import plotly.subplots as sp
 
 # ===============================================================================
-# Title: Death Risk Visualization by Age and Vaccination Status (Plotly HTML)
+# Title: Dynamic Death Risk Visualization by Age and Vaccination Status (Plotly HTML)
 #     This script processes a Czech vaccination and death dataset to analyze
 #     age-specific death risks for vaccinated (vx) vs unvaccinated (uvx) groups.
 #    
 #    The pipeline:
 #    - Loads individual-level data with dose dates and death date.
-#    - Computes age and vaccination status.
+#    - Computes age and dynamic daily vaccination status.
 #    - Calculates daily alive population and death counts per age group.
 #    - Computes death risk per 100k for total, vx, and uvx groups.
 #    - Applies smoothing via rolling average.
@@ -18,12 +18,12 @@ import plotly.subplots as sp
 #    - Produces a Plotly HTML with:
 #        1. Smoothed death risk time series (hidden by default).
 #        2. Mean death risk bar charts per age group.
-#===============================================================================
+#==============================================================================
 
 # === File Paths ===
-INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv" # -> czech-FOI real data
-#INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\sim_NOBIAS_Vesely_106_202403141131.csv" # -> simulated terstdata (bias check) with homogen constant death risk over time
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\E) death risk by age\E) vx_uvx_death_risk_by_age.html"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv" # -> czech-FOI real data
+INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\sim_SELCTION_BIAS_Vesely_106_202403141131.csv" # -> simulated testdata homogen random constant death rates over time per ag  
+OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\E) death risk by age\E) sim selection bias vx_uvx_death_risk_by_age.html"
 
 # === Parameters ===
 START_DATE = pd.Timestamp("2020-01-01")  # reference day zero
@@ -43,11 +43,10 @@ df = pd.read_csv(
 df.columns = [col.strip().lower() for col in df.columns]
 dose_cols = [f"datum_{i}" for i in range(1, 8)]
 
-# Compute age and vaccination status
+# Compute age
 df["birth_year"] = pd.to_numeric(df["rok_narozeni"], errors="coerce")
 df["age"] = REFERENCE_YEAR - df["birth_year"]
-df = df[df["age"].between(0, MAX_AGE)]  # keep valid age range
-df["is_vaxed"] = df[dose_cols].notna().any(axis=1).astype(int)
+df = df[df["age"].between(0, MAX_AGE)]
 
 # Days since START_DATE
 to_day = lambda s: (s - START_DATE).dt.days
@@ -57,10 +56,9 @@ for col in dose_cols:
 df["first_dose_day"] = df[[c + "_day" for c in dose_cols]].min(axis=1, skipna=True)
 
 # === End Measure and Start Measure per Age ===
-END_MEASURE = int(df["t_death"].dropna().max())  # latest death day in data
+END_MEASURE = int(df["t_death"].dropna().max())
 print(f"Using END_MEASURE = {END_MEASURE}")
 
-# Start measure: first dose day per age (minimum across individuals)
 first_dose_per_age = df.groupby("age")["first_dose_day"].min().clip(lower=0).astype(int)
 START_MEASURE = first_dose_per_age.to_dict()
 print(f"Using START_MEASURE = {START_MEASURE}")
@@ -75,26 +73,31 @@ death_risk_total = np.zeros((n_ages, n_days))
 death_risk_vx = np.zeros((n_ages, n_days))
 death_risk_uvx = np.zeros((n_ages, n_days))
 
-# === Calculate Population and Deaths per Age and Day ===
+# === Calculate Population and Deaths per Age and Day with DYNAMIC VAX STATUS ===
 for i, age in enumerate(ages):
     sub = df[df["age"] == age]
     if sub.empty:
         continue
 
-    dday = sub["t_death"].values             # individual death days
-    vaxed = sub["is_vaxed"].values           # 0 or 1 for each person
+    dday = sub["t_death"].values
+    first_dose = sub["first_dose_day"].values
 
-    # Alive matrix: person is alive if day < their death day
-    death_day_matrix = np.broadcast_to(dday[:, None], (len(dday), n_days))
-    day_matrix = np.broadcast_to(days[None, :], (len(dday), n_days))
-    alive_mask = np.isnan(death_day_matrix) | (death_day_matrix > day_matrix)
-    died_mask = death_day_matrix == day_matrix
+    # Broadcast matrices
+    day_matrix = np.broadcast_to(days[None, :], (len(sub), n_days))
+    death_day_matrix = np.broadcast_to(dday[:, None], (len(sub), n_days))
+    first_dose_matrix = np.broadcast_to(first_dose[:, None], (len(sub), n_days))
 
-    # Vaccination status masks
-    vx_mask = vaxed[:, None] == 1
-    uvx_mask = vaxed[:, None] == 0
+    # Alive mask: before death (or no death)
+    alive_mask = np.isnan(dday[:, None]) | (day_matrix < death_day_matrix)
 
-    # Population and deaths per group
+    # Died on the day
+    died_mask = day_matrix == death_day_matrix
+
+    # Dynamic vaccination status
+    vx_mask = day_matrix >= first_dose_matrix  # vaccinated after first dose
+    uvx_mask = ~vx_mask                        # unvaccinated before first dose (or never dosed)
+
+    # Combine with alive/dead status
     pop_vx = np.sum(alive_mask & vx_mask, axis=0)
     pop_uvx = np.sum(alive_mask & uvx_mask, axis=0)
     death_vx = np.sum(died_mask & vx_mask, axis=0)
@@ -103,7 +106,7 @@ for i, age in enumerate(ages):
     total_pop = pop_vx + pop_uvx
     total_deaths = death_vx + death_uvx
 
-    # Risk = deaths / population * 100,000
+    # Death risk per 100,000
     with np.errstate(divide='ignore', invalid='ignore'):
         death_risk_total[i] = np.where(total_pop > 0, total_deaths / total_pop * 1e5, 0)
         death_risk_vx[i] = np.where(pop_vx > 0, death_vx / pop_vx * 1e5, 0)
@@ -189,7 +192,7 @@ fig.add_trace(
 # Final layout
 fig.update_layout(
     height=1000, width=900,
-    title_text="Death Risk Trends and Age-specific Averages (Post-Vax Start)",
+    title_text="Death Risk Trends and Age-specific Averages (Post-Vax Start, Dynamic Vx Status)",
     xaxis=dict(title="Day Since 2020‑01‑01"),
     xaxis2=dict(title="Age"),
     yaxis=dict(title="Death Risk per 100k/day"),
