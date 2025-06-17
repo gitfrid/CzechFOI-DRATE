@@ -193,13 +193,11 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA%29%20diff%20death%20dose%20agebin/sim%20no%20bias%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> 
 <br>
 _________________________________________
-### UC) 
+### UC) <br>There is a astonishing strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) !!
 
-**There is a astonishing strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) AG-70 !!**
-<br>
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
 <br>
-<br>The difference in deaths(uvx - vx) compensates for external influences!
+<br>The difference in deaths(uvx - vx) compensates for external influences - here AG 70!
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto">
 <br>
 
