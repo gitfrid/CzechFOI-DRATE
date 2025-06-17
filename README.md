@@ -6,6 +6,9 @@ CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data in
 **Hypothesis:
 It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. This remains true if both groups have the same homogen individual death rates.**
 
+**Hypothesis 2 (see CzechFOI-SIM repository): There is currently no reliable statistical method to determine the rate of death-related Adverse Events Following Immunisation (dAEFIs) at a frequency of approximately one additional death per 10,000 doses when the baseline mortality is unknown in real-world settings. 
+To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it?**
+
 <br>
 _________________________________________
 
