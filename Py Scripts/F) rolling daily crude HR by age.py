@@ -14,7 +14,7 @@ import plotly.subplots as sp
 #  - Calculates population-at-risk and deaths per group per age/day.
 #  - Computes crude HRs using a centered rolling window (default ±30 days).
 #  - Smooths HRs for visual clarity and plots:
-#     - Time-series of smoothed and raw daily crude HR by age.
+#     - Time-series of smoothed and raw daily crude HR by age and daily relative HR vx/uvx
 #     - Mean crude HR per age (after vaccination start).
 
 # Output:
@@ -23,9 +23,10 @@ import plotly.subplots as sp
 
 
 # === File Paths ===
-# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant death rate
-INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"  # -> Czech FOI real data
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\F) rolling daily crude HR by age\F) rolling daily crude HR by age.html"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant random death rate
+INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_SELCTION_BIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant random death rate with constraint death date >= last dose date  
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"  # -> Czech FOI real data
+OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\F) rolling daily crude HR by age\F) selection bias rolling daily crude HR by age.html"
 
 # === Parameters ===
 START_DATE = pd.Timestamp("2020-01-01")  # reference day zero for time axis
@@ -198,7 +199,7 @@ for age in mean_crude_hr["age"]:
     fig.add_trace(
         go.Scatter(x=adf["day"], y=adf["rel_hr_vx_uvx"],
                    mode="lines", name=f"Age {age} • Daily Vx/UVX HR",
-                   line=dict(color="green", width=1, dash="dot"), visible="legendonly"),
+                   line=dict(color="green", width=1, dash="solid"), visible="legendonly"),
         row=1, col=1, secondary_y=True
     )
 

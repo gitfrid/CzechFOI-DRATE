@@ -1,0 +1,1 @@
+Global causal estimate (linear regression): 0.0007248277037699147
