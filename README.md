@@ -192,12 +192,15 @@ _________________________________________
 _________________________________________
 ### UC) 
 
-**There is a astonishing strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) for AG-70 !**
+**There is a astonishing strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) AG-70 !**
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
 <br>
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto">
 <br>
+
+[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.html)
+
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br> 
 <br>
