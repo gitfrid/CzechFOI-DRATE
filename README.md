@@ -197,7 +197,7 @@ _________________________________________
 <br>Zoomd in
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20doses_vs_deaths_dowhy_zoom.png width="1280" height="auto">
 <br>
-<br>**DoWhy seems not to bee correct here**
+<br>**DoWhy seems not to be correct here**
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br> 
 <br>
@@ -218,7 +218,7 @@ _________________________________________
 <br>Zoomd in
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/S)%20diff%20death%20dose%20agebin/S%29%20vx%20uvx%20raw%20diff%20population%20doses%20causal%20estimate_zoom.png width="1280" height="auto">
 <br>
-<br>**DoWhy seems not to bee correct here**
+<br>**DoWhy seems not to be correct here**
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br>
 <br>
