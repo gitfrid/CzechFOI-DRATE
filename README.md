@@ -148,6 +148,33 @@ _________________________________________
 <br>
 _________________________________________
 
+### More plots added:
+_________________________________________
+### AC) 
+
+<br>Phyton script [AC) age_mean.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/A%29%20age_mean.py) 
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20age%20mean%20pop/AC)%20age_mean_pop.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20age%20mean%20pop/AC)%20sim%20no%20bias%20age_mean_pop.png width="1280" height="auto">
+<br>
+_________________________________________
+### EA) 
+
+<br>Phyton script [EA) batches vs death.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/EA%29%20batches%20vs%20death.py) 
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/EA)%20batches%20vs%20death/hist_chunks/batch_hist_1_to_100.png width="1280" height="auto">
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/EA)%20batches%20vs%20death/hist_chunks/batch_hist_201_to_300.png width="1280" height="auto">
+<br>
+_________________________________________
+
 ### Software Requirements:
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
