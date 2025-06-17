@@ -225,6 +225,14 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/S)%20diff%20death%20dose%20agebin/S%29%20sim%20no%20bias%20vx%20uvx%20raw%20diff%20population%20doses%20causal%20estimate.png width="1280" height="auto"> 
 <br>
 _________________________________________
+### UB) 
+
+<br>Phyton script [UB) diff death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UB%29%20diff%20death%20dose%20agebin.py)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UB%29%20diff%20death%20dose%20agebin/dowhy_scatter_doses_vs_diff.png width="1280" height="auto">
+<br>
+_________________________________________
 ### Software Requirements:
 
 These scripts don't require SQLite queries to aggregate the 11 million individual data rows.
