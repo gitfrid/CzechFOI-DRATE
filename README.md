@@ -91,7 +91,21 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20sim%20no%20bias%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
 <br>
+_________________________________________
 
+### F) daily crude HR vx/uvx
+
+<br>Phyton script [F) rolling daily crude HR by age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/F%29%20rolling%20daily%20crude%20HR%20by%20age.py) 
+<br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/F%29%20rolling%20daily%20crude%20HR%20by%20age/F%29%20rolling%20daily%20crude%20HR%20by%20age.html)
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/F%29%20rolling%20daily%20crude%20HR%20by%20age/F%29%20rolling%20daily%20crude%20HR%20by%20age.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/F%29%20rolling%20daily%20crude%20HR%20by%20age/F%29%20sim%20no%20bias%20rolling%20daily%20crude%20HR%20by%20age.png width="1280" height="auto">
+<br>
 _________________________________________
 ### J) Bias Study ratio vx_uvx.py
 
