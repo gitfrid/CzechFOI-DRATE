@@ -192,7 +192,7 @@ _________________________________________
 _________________________________________
 ### UC) 
 
-**There is a strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx)**
+**There is a strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) for AG-70 !**
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
 <br>
 <br>
