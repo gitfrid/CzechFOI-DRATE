@@ -6,6 +6,9 @@ CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data in
 **Hypothesis:
 It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. This remains true if both groups have the same homogen individual death rates.**
 
+**Hypothesis 2 (see CzechFOI-SIM repository): There is currently no reliable statistical method to determine the rate of death-related Adverse Events Following Immunisation (dAEFIs) at a frequency of approximately one additional death per 10,000 doses when the baseline mortality is unknown in real-world settings. 
+To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it?**
+
 <br>
 _________________________________________
 
@@ -120,7 +123,7 @@ _________________________________________
 
 ### ZB) Hypergeometric (used by Charles Sanders Peirce) Vaccine Effectiveness Analysis with Confidence Intervals
 
-<br>Phyton script [](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.png) 
+<br>Phyton script [ZB) CS-Pierce Hypergeometric VaxCodes.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZB%29%20CS-Pierce%20Hypergeometric%20VaxCodes/ZB%29%20hypergeom_vaccine_effectiveness_with_CI_and_vaxcode_age.html)
 <br>
 <br>
@@ -197,7 +200,7 @@ _________________________________________
 <br>Zoomd in
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20doses_vs_deaths_dowhy_zoom.png width="1280" height="auto">
 <br>
-<br>**DoWhy seems not to bee correct here**
+<br>**DoWhy seems not to be correct here**
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br> 
 <br>
@@ -218,7 +221,7 @@ _________________________________________
 <br>Zoomd in
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/S)%20diff%20death%20dose%20agebin/S%29%20vx%20uvx%20raw%20diff%20population%20doses%20causal%20estimate_zoom.png width="1280" height="auto">
 <br>
-<br>**DoWhy seems not to bee correct here**
+<br>**DoWhy seems not to be correct here**
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br>
 <br>
