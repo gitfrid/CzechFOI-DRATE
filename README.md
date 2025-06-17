@@ -174,6 +174,19 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/EA)%20batches%20vs%20death/hist_chunks/batch_hist_201_to_300.png width="1280" height="auto">
 <br>
 _________________________________________
+### UA) 
+
+<br>Phyton script [UA) diff death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UA%29%20diff%20death%20dose%20agebin.py) 
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA)%20diff%20death%20dose%20agebin/rolling_corr_doses_vs_diff.png width="1280" height="auto">
+<br>
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA%29%20diff%20death%20dose%20agebin/sim%20no%20bias%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> width="1280" height="auto">
+<br>
+_________________________________________
 
 ### Software Requirements:
 
