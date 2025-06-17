@@ -184,7 +184,28 @@ _________________________________________
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br> 
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA%29%20diff%20death%20dose%20agebin/sim%20no%20bias%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA%29%20diff%20death%20dose%20agebin/sim%20no%20bias%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> 
+<br>
+_________________________________________
+### ZG) 
+
+<br>Phyton script [ZG) doses_vs_deaths_dowhy.png](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZG%29%20dowhy%20doses%20vs%20death.py) 
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20doses_vs_deaths_dowhy.png width="1280" height="auto">
+<br>
+<br>Zoomd in
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20doses_vs_deaths_dowhy_zoom.png width="1280" height="auto">
+<br>
+<br>DoWhy seems not to bee correct here 
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20sim%20no%20bias%20doses_vs_deaths_dowhy.png width="1280" height="auto"> 
+<br>
+<br>Zoomd in should be horizonta line (same simulated death reate for all three traces)
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20sim%20no%20bias%20doses_vs_deaths_dowhy_zoom.png width="1280" height="auto"> 
 <br>
 _________________________________________
 
