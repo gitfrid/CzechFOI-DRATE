@@ -15,6 +15,24 @@ CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data in
 <br>
 _________________________________________
 
+### UC) <br>There is a astonishing strong visual overlay (positive correlation) between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) !!
+
+<br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
+<br>
+<br>**The difference in deaths(uvx - vx) compensates for external influences, so vax effect should be left!!**
+<br>**This needs further investigation!!**
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto">
+<br>
+
+[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.html)
+
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC)%20diff%20norm%20death%20dose%20agebin/sim%20no%20bias%20norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> 
+<br>
+_________________________________________
+
 ### When comparing different methods, Cox PH seemed to calculate the best approximation
 
 <br>Phyton script [W) coxph real deaths real vax dates by age](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.py)
