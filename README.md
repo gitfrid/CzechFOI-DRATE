@@ -19,7 +19,7 @@ _________________________________________
 
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
 <br>
-<br>**The difference in deaths(uvx - vx) compensates for external influences, so vax effect should be left!!**
+<br>**The difference in deaths (uvx - vx) compensates for external influences, so pure vax effect should be left!!**
 <br>**This needs further investigation!!**
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto">
 <br>
