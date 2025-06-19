@@ -154,7 +154,7 @@ _________________________________________
 
 ### More plots added:
 _________________________________________
-### AC) 
+### AC) Mean age at death before and after the start of vaccination
 
 <br>Phyton script [AC) age_mean.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/A%29%20age_mean.py) 
 <br>
@@ -178,7 +178,7 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/EA)%20batches%20vs%20death/hist_chunks/batch_hist_201_to_300.png width="1280" height="auto">
 <br>
 _________________________________________
-### UA) 
+### UA) Days since Doses
 
 <br>Phyton script [UA) diff death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UA%29%20diff%20death%20dose%20agebin.py) 
 <br>
