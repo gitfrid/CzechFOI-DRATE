@@ -167,7 +167,7 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20age%20mean%20pop/AC)%20sim%20no%20bias%20age_mean_pop.png width="1280" height="auto">
 <br>
 _________________________________________
-### EA) 
+### EA) Days since Doses
 
 <br>Phyton script [EA) batches vs death.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/EA%29%20batches%20vs%20death.py) 
 <br>
@@ -178,7 +178,7 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/EA)%20batches%20vs%20death/hist_chunks/batch_hist_201_to_300.png width="1280" height="auto">
 <br>
 _________________________________________
-### UA) Days since Doses
+### UA) 
 
 <br>Phyton script [UA) diff death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UA%29%20diff%20death%20dose%20agebin.py) 
 <br>
