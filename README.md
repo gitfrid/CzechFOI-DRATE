@@ -195,7 +195,7 @@ _________________________________________
 _________________________________________
 
 ### UC) 
-<br>**There is visual overlay - positive correlation - between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) !!
+<br>**Rolling correlation between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) !!
 <br>The difference in deaths (uvx - vx) compensates for external influences, so vax effect should be left!!**
 
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
