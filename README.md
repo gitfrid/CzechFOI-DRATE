@@ -30,7 +30,7 @@ _________________________________________
 <br>
 _________________________________________
 
-### DoWhy causal impact estimation
+### ZA) DoWhy causal impact estimation
 
 <br>Phyton script [ZA) dowhy doses vs sim_total_death individual.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZA%29%20dowhy%20doses%20vs%20sim_total_death%20individual.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZA%29%20dowhy%20doses%20vs%20total_death%20individual/ZA%29%20doses_vs_total_deaths_dowhy_individual.html)
