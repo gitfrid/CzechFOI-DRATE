@@ -22,9 +22,13 @@ import plotly.graph_objs as go
 # - An interactive HTML Plotly plot visualizing the processed data
 
 # === File Paths ===
-INPUT_CSV = "C:\github\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated Data to test script for bias
-# INPUT_CSV = "C:\github\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv" # -> real Czech-FOI Data
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\ZF) vx uvx norm\ZF) vx uvx norm sim HR no bias.html"
+INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_DEATHRISK_2X_Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINIMALBIAS_Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINIMALBIAS_DEATHRISK_10X_Vesely_106_202403141131.csv"
+
+OUTPUT_HTML = r"C:\CzechFOI-DRATE\Plot Results\ZF) vx uvx norm\ZF) vx uvx norm.html"
 
 START_DATE = pd.Timestamp('2020-01-01')  # Day 0 reference
 MAX_AGE = 113
@@ -231,13 +235,16 @@ for age in ages:
                              mode='lines', line=dict(width=1.5, color='orange'), visible='legendonly'))
 
 # === Export Plot ===
-fig.update_layout(title='Deaths, Population, and Dose Counts by Vaccination Status and Age',
-                  xaxis_title='Days since 2020-01-01',
-                  yaxis=dict(title='Deaths per 100k (normalized)', side='left'),
-                  yaxis2=dict(title='Raw death counts', overlaying='y', side='right'),
-                  yaxis3=dict(title='Population size', overlaying='y', anchor='free', side='left', position=0.05),
-                  yaxis4=dict(title='Dose counts', overlaying='y', anchor='free', side='right', position=0.95),
-                  legend=dict(orientation='h', y=-0.3),
-                  height=800)
+fig.update_layout(
+    title='Vaccinated vs Unvaccinated Deaths, Population, and Doses by Age (Timeline Based on Deaths Only)',
+    xaxis=dict(title='Days since 2020-01-01'),
+    yaxis=dict(title='Normalized Death Rate / 100k', side='left', autorange=True),
+    yaxis2=dict(title='Raw Deaths', overlaying='y', side='right', position=0.95, autorange=True),
+    yaxis3=dict(title='Population', overlaying='y', side='right', position=1.0, autorange=True, type='log'),
+    yaxis4=dict(title='Dose Counts (7-day rolling)', overlaying='y', side='left', position=0.05, autorange=True),
+    template='plotly_white',
+    height=900,
+    showlegend=True
+)
 
 fig.write_html(OUTPUT_HTML)
