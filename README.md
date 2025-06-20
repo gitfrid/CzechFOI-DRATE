@@ -3,19 +3,19 @@
 CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data into two groups (vaccinated vx /unvaccinated uvx)
 <br>
 
-**Hypothesis:
-<br>It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. This remains true if both groups have the same homogen individual death rates.**
-
-**Hypothesis 2, see CzechFOI-SIM repository: 
-<br>There is currently no reliable statistical method to determine the rate of death-related Adverse Events Following Immunisation (dAEFIs) at a frequency of approximately one additional death per 10,000 doses when the baseline mortality is unknown in real-world settings.**
-<br>
-<br>**To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it?** 
-<br>This also applies vice versa (one death per 10,000 doses was removed/saved)
-
-<br>
 _________________________________________
 
-### When comparing different methods, Cox PH seemed to calculate the best approximation
+### Hypothesis 1 - see CzechFOI-StackSim repository<br><br>It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. <br>This remains true if both groups have the same homogen individual death rates.
+
+_________________________________________
+
+### Hypothesis 2 - see CzechFOI-SIM repository:<br><br>There is currently no reliable statistical method to determine the rate of death-related Adverse Events Following Immunisation (dAEFIs) at a frequency of approximately one additional death per 10,000 doses when the baseline mortality is unknown in real-world settings.
+<br>**To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it?
+<br>This also applies vice versa (one death per 10,000 doses was removed/saved)**
+
+_________________________________________
+
+### W) When comparing different methods, Cox PH seemed to calculate the best approximation for Hypothsis 1
 
 <br>Phyton script [W) coxph real deaths real vax dates by age](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.py)
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.html)
@@ -23,16 +23,14 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.png width="1280" height="auto">
 <br>
-<br>
-To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br>To test for bias, I run the same code on simulated data with a homogen uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
 <br> 
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/E%29%20death%20risk%20by%20age/E%29%20sim%20no%20bias%20vx_uvx_death_risk_by_age.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W)%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20no%20bias%20sim%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
 <br>
-
 _________________________________________
 
-### DoWhy causal impact estimation
+### ZA) DoWhy causal impact estimation
 
 <br>Phyton script [ZA) dowhy doses vs sim_total_death individual.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZA%29%20dowhy%20doses%20vs%20sim_total_death%20individual.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZA%29%20dowhy%20doses%20vs%20total_death%20individual/ZA%29%20doses_vs_total_deaths_dowhy_individual.html)
@@ -156,7 +154,7 @@ _________________________________________
 
 ### More plots added:
 _________________________________________
-### AC) 
+### AC) Mean age at death before and after the start of vaccination
 
 <br>Phyton script [AC) age_mean.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/A%29%20age_mean.py) 
 <br>
@@ -169,7 +167,7 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20age%20mean%20pop/AC)%20sim%20no%20bias%20age_mean_pop.png width="1280" height="auto">
 <br>
 _________________________________________
-### EA) 
+### EA) Days since Doses
 
 <br>Phyton script [EA) batches vs death.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/EA%29%20batches%20vs%20death.py) 
 <br>
@@ -193,12 +191,11 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UA%29%20diff%20death%20dose%20agebin/sim%20no%20bias%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> 
 <br>
 _________________________________________
-### UC) 
 
-**There is a astonishing strong visual overlay between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) AG-70 !!**
-<br>
+### UC) 
+<br>**Rolling correlation between the daily vaccine dose curve and the difference in normalized death rates between uvx and vx individuals (uvx - vx) !! The difference in deaths (uvx - vx) compensates for external influences, so vax effect should be left!!**
+
 <br>Phyton script [UC) diff norm death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/UC%29%20diff%20norm%20death%20dose%20agebin.py) 
-<br>
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto">
 <br>
@@ -206,11 +203,12 @@ _________________________________________
 [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC%29%20diff%20norm%20death%20dose%20agebin/norm%20rolling_corr_doses_vs_diff.html)
 
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
-<br> 
+<br**>As the simulated Death risk for the whole hetrogen population is constant over time, differnece uvx-vx should fluctuate horizontally around level 0!** 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/UC)%20diff%20norm%20death%20dose%20agebin/sim%20no%20bias%20norm%20rolling_corr_doses_vs_diff.png width="1280" height="auto"> 
 <br>
 _________________________________________
+
 ### ZG) 
 
 <br>Phyton script [ZG) doses_vs_deaths_dowhy.png](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZG%29%20dowhy%20doses%20vs%20death.py) 
