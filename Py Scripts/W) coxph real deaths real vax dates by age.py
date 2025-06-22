@@ -21,8 +21,12 @@ from pandas.api.types import CategoricalDtype
 
 # --- Config ---
 REFERENCE_DATE = pd.Timestamp("2020-01-01")
-INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\sim_NOBIAS_Vesely_106_202403141131.csv"
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\W) coxph real deaths real vax dates by age\W) coxph no bias sim deaths sim vax dates by age.html"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_DEATHRISK_2X_Vesely_106_202403141131.csv"
+INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_Vesely_106_SIMULATED.csv"
+
+OUTPUT_HTML = r"C:\CzechFOI-DRATE\Plot Results\W) coxph real deaths real vax dates by age\W) sim MINBIAS coxph deaths sim vax dates by age.html"
 start_delay = 0
 AGE_BIN_WIDTH = 1
 
