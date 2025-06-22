@@ -73,6 +73,10 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X%29%20sim%20MINBIAS%20Population_and_Deaths_Trends_with_All_Doses.png width="1280" height="auto">
 <br>
+<br>The stacked events for the MINBIAS simulation
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X)%20sim%20MINBIAS%20DoseAligned_Stacked_Normalized_Deaths.png width="1280" height="auto">
+<br>
 
 _________________________________________
 
