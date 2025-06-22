@@ -20,14 +20,26 @@ _________________________________________
 <br>Phyton script [W) coxph real deaths real vax dates by age](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.py)
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.html)
 <br>
+<br> Cox PH analysis of real Czech-FOI data
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age.png width="1280" height="auto">
 <br>
-<br>To test for bias, I run the same code on simulated data with a homogen uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias.
+<br>**To test for bias, I run the same code on simulated data with a homogen uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias**.
 <br> 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W)%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20coxph%20no%20bias%20sim%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
 <br>
+
+_________________________________________
+
+Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) 
+
+<br>**A dataset was simulated -by script above - assuming a homogeneous, uniform, and time-invariant mortality rate across age groups. Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introduced immortal time bias, as illustrated below.**
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20sim%20MINBIAS%20coxph%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
+<br>
+
 _________________________________________
 
 ### ZA) DoWhy causal impact estimation
