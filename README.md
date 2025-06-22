@@ -10,8 +10,8 @@ _________________________________________
 _________________________________________
 
 ### Hypothesis 2 - [see CzechFOI-SIM repository](https://github.com/gitfrid/CzechFOI-SIM):<br><br>There is currently no reliable statistical method to determine the rate of death-related Adverse Events Following Immunisation (dAEFIs) at a frequency of approximately one additional death per 10,000 doses when the baseline mortality is unknown in real-world settings.
-<br>**To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it as a benefactor of mankind?
-<br>This also applies vice versa (one death per 10,000 doses was removed/saved)**
+<br>**To the best of my knowledge,  this (vital) problem is still waiting for the head that can solve it, as a benefactor of mankind?
+This also applies vice versa (one death per 10,000 doses removed/saved)**
 
 _________________________________________
 
