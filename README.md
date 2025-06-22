@@ -27,7 +27,7 @@ _________________________________________
 <br>
 <br>
 <br>
-<br>**Plot of the dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.
+<br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse.**
 <br>Test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
