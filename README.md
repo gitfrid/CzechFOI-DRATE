@@ -5,7 +5,7 @@ CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data in
 
 _________________________________________
 
-### Hypothesis 1 - see CzechFOI-StackSim repository<br><br>It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. <br>This remains true if both groups have the same homogen individual death rates.
+### Hypothesis 1 - [see CzechFOI-StackSim repository](https://github.com/gitfrid/CzechFOI-SIM) <br><br>It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. <br>This remains true if both groups have the same homogen individual death rates.
 
 _________________________________________
 
