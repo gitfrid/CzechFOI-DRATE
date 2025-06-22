@@ -28,7 +28,7 @@ _________________________________________
 <br>
 <br>Simulated test dataset sim_NOBIAS_Vesely_106_202403141131.csv created by [NC) generate csv simulate deaths no bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NC%29%20generate%20csv%20simulate%20deaths%20no%20bias.py).
 <br>
-<br>**Estimates age-specific death rates and simulates constant, uniformly random death dates across the observation window, preserving vaccination timings but ignoring cases where death precedes vaccination (not the case in real world) to prevent any bias.**
+<br>**Estimates age-specific death rates and simulates constant, uniformly random death dates across the observation window, preserving vaccination timings but ignoring cases where death precedes vaccination to prevent any bias (not the case in real world).**
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X%29%20sim%20NOBIAS%20Population_and_Deaths_Trends_with_All_Doses.png width="1280" height="auto">
 <br>
