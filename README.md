@@ -27,7 +27,7 @@ _________________________________________
 <br>
 <br>
 <br>
-<br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.
+<br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse.**
 <br>Test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
@@ -39,7 +39,7 @@ _________________________________________
 <br>
 <br>
 <br>
-<br>**Plot of the dataset below estimates age-specific death rates and simulates constant, uniformly random death dates across the observation window, preserving vaccination timings but ignoring cases where death precedes vaccination to prevent any bias - not the case in real world.**
+<br>**Plot of simulated dataset below estimates age-specific death rates and simulates constant, uniformly random death dates across the observation window, preserving vaccination timings but ignoring cases where death precedes vaccination to prevent any bias - not the case in real world scenario.**
 <br>Test dataset sim_NOBIAS_Vesely_106_202403141131.csv created by [NC) generate csv simulate deaths no bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NC%29%20generate%20csv%20simulate%20deaths%20no%20bias.py)
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X%29%20sim%20NOBIAS%20Population_and_Deaths_Trends_with_All_Doses.png width="1280" height="auto">
