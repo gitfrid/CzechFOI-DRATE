@@ -22,13 +22,13 @@ import plotly.graph_objs as go
 # - An interactive HTML Plotly plot visualizing the processed data
 
 # === File Paths ===
-INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
+INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_NOBIAS_DEATHRISK_2X_Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINIMALBIAS_Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINIMALBIAS_DEATHRISK_10X_Vesely_106_202403141131.csv"
 
-OUTPUT_HTML = r"C:\CzechFOI-DRATE\Plot Results\ZF) vx uvx norm\ZF) vx uvx norm.html"
+OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\ZF) vx uvx norm\ZF) vx uvx norm.html"
 
 START_DATE = pd.Timestamp('2020-01-01')  # Day 0 reference
 MAX_AGE = 113
