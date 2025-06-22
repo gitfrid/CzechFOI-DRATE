@@ -35,7 +35,7 @@ _________________________________________
 ### If the code is correct, this might explain why scientists endlessly debate the results of their comparison
 Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) 
 
-<br>**A dataset was simulated -by script above - assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introduced immortal time bias, as illustrated below.**
+<br>**A dataset was simulated -by script above - assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introduced immortal time bias, as illustrated below.**
 <br> 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20sim%20MINBIAS%20coxph%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
