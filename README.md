@@ -32,6 +32,7 @@ _________________________________________
 
 _________________________________________
 
+### If the code is correct, this might explain why scientists endlessly debate their results
 Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) 
 
 <br>**A dataset was simulated -by script above - assuming a homogeneous, uniform, and time-invariant mortality rate across age groups. Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introduced immortal time bias, as illustrated below.**
