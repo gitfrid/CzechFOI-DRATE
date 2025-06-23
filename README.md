@@ -51,6 +51,9 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X)%20sim%20NOBIAS%20DoseAligned_Stacked_Normalized_Deaths.png width="1280" height="auto">
 <br>
+
+<br>Alternatiuvetest dataset sim_MINBIAS_TWO_DEATHRATES_10X_Vesely_106_SIMULATED.csv created by [NL) generate csv simulate deaths two deathrisk 10X minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NL%29%20generate%20csv%20simulate%20deaths%20two%20deathrisk%2010X%20minimal%20bias.py) To make it even more realistic. Generates a fully synthetic Czech vaccination and death dataset using real-world dose timing and age-specific death rates. It randomly simulates deaths based on age and risk—where 10% of the population per age has a 10× higher death risk as the 90% population. Then assigns vaccine doses only to those alive at the time, replicating real-world logic but inherently introducing immortal time bias.
+ 
 _________________________________________
 <br>
 
@@ -77,10 +80,6 @@ Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/W%29%20coxph%20real%20deaths%20real%20vax%20dates%20by%20age/W%29%20sim%20MINBIAS%20coxph%20deaths%20sim%20vax%20dates%20by%20age.png width="1280" height="auto">
 <br>
-<br>
-<br>Alternative: Phyton script [NL) generate csv simulate deaths two deathrisk 10X minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NL%29%20generate%20csv%20simulate%20deaths%20two%20deathrisk%2010X%20minimal%20bias.py) 
-<br>Generates a fully synthetic Czech vaccination and death dataset using real-world dose timing and age-specific death rates. It randomly simulates deaths based on age and risk—where 10% of the population per age has a 10× higher death risk as th rest. 
-Then assigns vaccine doses only to those alive at the time, replicating real-world logic but inherently introducing immortal time bias.
 
 _________________________________________
 
