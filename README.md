@@ -53,7 +53,33 @@ _________________________________________
 <br>
 
 <br>Alternatiuvetest dataset sim_MINBIAS_TWO_DEATHRATES_10X_Vesely_106_SIMULATED.csv created by [NL) generate csv simulate deaths two deathrisk 10X minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NL%29%20generate%20csv%20simulate%20deaths%20two%20deathrisk%2010X%20minimal%20bias.py) To make it even more realistic. Generates a fully synthetic Czech vaccination and death dataset using real-world dose timing and age-specific death rates. It randomly simulates deaths based on age and risk—where 10% of the population per age has a 10× higher death risk as the 90% population. Then assigns vaccine doses only to those alive at the time, replicating real-world logic but inherently introducing immortal time bias.
- 
+
+ _________________________________________
+<br>
+
+### Y) person days  calculation for Hypothsis 1
+
+<br>Phyton script []()
+<br>
+<br> Person days real world dataset Vesely_106_202403141131.csv 
+<br>
+<img src= width="1280" height="auto">
+<br>
+<br>Phyton script [NC) generate csv simulate deaths no bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NC%29%20generate%20csv%20simulate%20deaths%20no%20bias.py) generates simulated test dataset sim_NOBIAS_Vesely_106_202403141131.csv
+<br>
+<br>**To test for bias, I run the same code on simulated data with a homogen uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, to avoid any selection bias**.
+<br> 
+<br>
+<img src= width="1280" height="auto">
+<br>
+Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) generates simulated test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv.
+<br>
+<br>**The test dataset assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.**
+<br> 
+<br>
+<img src= width="1280" height="auto">
+<br>
+
 _________________________________________
 <br>
 
