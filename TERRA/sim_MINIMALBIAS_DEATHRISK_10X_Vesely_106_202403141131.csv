@@ -1,5 +1,5 @@
 Only a placeholder because the file was to big to upload to github (400 MB) 
-Create this file with the script: "C:\github\CzechFOI-DRATE\Py Scripts\NK) generate csv simulate deaths minimal bias.py"
+Create this file with the script: "C:\github\CzechFOI-DRATE\Py Scripts\NL) generate csv simulate deaths two deathrisk 10X minimal bias.py"
 
 Prerequisite: "C:\github\CzechFOI-DRATE\TERRA\sim_Vesely_106_202403141131.csv" must be present.
 
