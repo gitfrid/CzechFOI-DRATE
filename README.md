@@ -74,8 +74,8 @@ _________________________________________
 <br>
 Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) generates simulated test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv.
 <br>
-<br>**The test dataset assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.**
-<br> Should be the same for vx uvx - maybee bug in code, or don't adjust for death day >= last dose day 
+<br>**The test dataset assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.
+<br> Should be the same for vx uvx - maybee bug in code, or don't adjust for death day >= last dose day bias**
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y)%20vx%20uvx%20persondays/Y%29%20sim%20MINBIAS%20vx%20uvx%20persondays%20mortality.png width="1280" height="auto">
 <br>
