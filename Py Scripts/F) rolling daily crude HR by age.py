@@ -23,10 +23,12 @@ import plotly.subplots as sp
 
 
 # === File Paths ===
-# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant random death rate
-INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_SELCTION_BIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant random death rate with constraint death date >= last dose date  
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"  # -> Czech FOI real data
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\F) rolling daily crude HR by age\F) selection bias rolling daily crude HR by age.html"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated homogenized constant random death rate
+INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_Vesely_106_SIMULATED.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_TWO_DEATHRATES_10X_Vesely_106_SIMULATED.csv"
+
+OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\F) rolling daily crude HR by age\F) sim MINBIAS rolling daily crude HR by age.html"
 
 # === Parameters ===
 START_DATE = pd.Timestamp("2020-01-01")  # reference day zero for time axis
