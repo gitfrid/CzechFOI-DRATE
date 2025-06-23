@@ -216,7 +216,7 @@ _________________________________________
 
 ### More plots added:
 _________________________________________
-### AC) Mean age at death before and after the start of vaccination
+### AC) Mean age at death before and after the start of vaccination czech real world data
 
 <br>Phyton script [AC) age_mean.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/A%29%20age_mean.py) 
 <br>
