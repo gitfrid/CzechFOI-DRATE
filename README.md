@@ -59,6 +59,34 @@ _________________________________________
 
 ### Y) person days  calculation for Hypothsis 1
 
+<br>Phyton script [Y) vx uvx persondays immortal time adjusted.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/Y%29%20vx%20uvx%20persondays%20immortal%20time%20adjusted.py)
+<br>
+<br> Person days real world dataset Vesely_106_202403141131.csv 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y)%20vx%20uvx%20persondays%20baslinemortality/Y)%20vx%20uvx%20personday_exess_mortality_adjusted.png width="1280" height="auto">
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y%29%20vx%20uvx%20persondays%20baslinemortality/Y)%20vx%20uvx%20personday_exess_mortality_adjusted_exess.png width="1280" height="auto">
+<br>
+<br>Phyton script [NC) generate csv simulate deaths no bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NC%29%20generate%20csv%20simulate%20deaths%20no%20bias.py) generates simulated test dataset sim_NOBIAS_Vesely_106_202403141131.csv
+<br>
+<br>**To test for bias, I run the same code on simulated data with a homogen uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, to avoid any selection bias**.
+<br> 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y%29%20vx%20uvx%20persondays%20baslinemortality/Y%20sim%20NOBIAS%20vx%20uvx%20personday_exess_mortality_adjusted.png width="1280" height="auto">
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y%29%20vx%20uvx%20persondays%20baslinemortality/Y%20sim%20NOBIAS%20vx%20uvx%20personday_exess_mortality_adjusted_exess.png width="1280" height="auto">
+<br>
+Phyton script [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py) generates simulated test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv.
+<br>
+<br>**The test dataset assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world) inherently introducing immortal time bias, as illustrated below.
+<br> Should be the same for vx uvx - perhaps bug in code or method not correct applied, or personday method don't adjust for death day >= last dose day bias?**
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y%29%20vx%20uvx%20persondays%20baslinemortality/Y%20sim%20MINBIAS%20vx%20uvx%20personday_exess_mortality_adjusted.png width="1280" height="auto">
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/Y%29%20vx%20uvx%20persondays%20baslinemortality/Y%20sim%20MINBIAS%20vx%20uvx%20personday_exess_mortality_adjusted_exess.png width="1280" height="auto">
+<br>
+
+
 <br>Phyton script [Y) vx uvx persondays.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/Y%29%20vx%20uvx%20persondays.py)
 <br>
 <br> Person days real world dataset Vesely_106_202403141131.csv 
