@@ -51,13 +51,27 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X)%20sim%20NOBIAS%20DoseAligned_Stacked_Normalized_Deaths.png width="1280" height="auto">
 <br>
+_________________________________________
 
-<br>Alternatiuvetest dataset sim_MINBIAS_TWO_DEATHRATES_10X_Vesely_106_SIMULATED.csv created by [NL) generate csv simulate deaths two deathrisk 10X minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NL%29%20generate%20csv%20simulate%20deaths%20two%20deathrisk%2010X%20minimal%20bias.py) To make it even more realistic. Generates a fully synthetic Czech vaccination and death dataset using real-world dose timing and age-specific death rates. It randomly simulates deaths based on age and risk—where 10% of the population per age has a 10× higher death risk as the 90% population. Then assigns vaccine doses only to those alive at the time, replicating real-world logic but inherently introducing immortal time bias.
+### CA) person days  landmark methode for Hypothsis 1
 
- _________________________________________
+<br>Phyton script []()
 <br>
+<br>Person days real world dataset Vesely_106_202403141131.csv 
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20real%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
+<br>
+<br>Uses a simulated minbias dataset to test whether the method compensates for mortality bias (forced restriction death_day >= last_dose_day). It seems to only partially correct the bias
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20minbias%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
+<br>
+<br>Uses simulated nobias dataset to test methode (no constraint death_day >= last_dose_day)
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20nobias%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
+<br>
+ _________________________________________
 
-### Y) person days  calculation for Hypothsis 1
+### Y) person days  methode for Hypothsis 1
 
 <br>Phyton script [Y) vx uvx persondays immortal time adjusted.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/Y%29%20vx%20uvx%20persondays%20immortal%20time%20adjusted.py)
 <br>
