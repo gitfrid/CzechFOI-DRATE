@@ -15,14 +15,15 @@ This also applies vice versa (one death per 10,000 doses removed/saved)**
 
 _________________________________________
 
-### Project GOAL<br> To find a method that compensates for biases arising from the non-random assignment of individuals to vaccinated (vx) and unvaccinated (uvx) groups based on vaccination timing—a bias that is unavoidable in practice but must be addressed to fairly compare these groups 
+### Project GOAL<br> The aim is to find a method that compensates for biases introduced by the non-random assignment of individuals to vaccinated (vx) and unvaccinated (uvx) groups based on the timing of vaccination. This type of bias is unavoidable in real-world datasets, but it must be corrected in order to enable a fair comparison between the two groups.
 
-Minimal-Bias Simulated Test Dataset:
+Simulated Test Dataset with Minimal Bias
 
-Simulated data with identical constant Homogeneous death risk for all individuals per Age.
-Then, for vaccinated individuals, I repeatedly resampled the dose series (one series means dose1 through dose7 from the real schedule) by randomly choosing individuals, until the constraint day_of_death ≥ day_of_last_dose was satisfied.
-I did not change or remove death days explicitly; I only reassigned dose schedules by resampling individuals until this constraint held.
-Test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
+A simulated dataset was created in which all individuals within an age group share an identical, constant, and homogeneous risk of death.
+For vaccinated individuals, complete vaccination schedules (consisting of doses 1 through 7 based on the real-world schedule) were randomly reassigned to individuals until the condition was met that the day of death occurred on or after the day of the last dose.
+The actual dates of death were not changed or removed; only the assignment of vaccination dates was adjusted through repeated resampling to ensure this temporal condition was satisfied.
+<br>
+<br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 ________________________________________________
 <br>
 
