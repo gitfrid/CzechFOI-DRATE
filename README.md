@@ -55,7 +55,7 @@ _________________________________________
 
 ### CA) person days  landmark methode for Hypothsis 1
 
-<br>Phyton script []()
+<br>Phyton script [CA) Landmark adjust resampling truncation bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias.py)
 <br>
 <br>Person days real world dataset Vesely_106_202403141131.csv 
 <br>
