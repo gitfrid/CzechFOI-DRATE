@@ -15,7 +15,7 @@ This also applies vice versa (one death per 10,000 doses removed/saved)**
 
 _________________________________________
 
-### Project GOAL<br> The aim is to find a method that compensates for biases introduced by the non-random assignment of individuals to vaccinated (vx) and unvaccinated (uvx) groups based on the timing of vaccination. This type of bias is unavoidable in real-world datasets, but it must be corrected in order to enable a fair comparison between the two groups.
+### Project GOAL<br><br> The aim is to find a method that compensates for biases introduced by the non-random assignment of individuals to vaccinated (vx) and unvaccinated (uvx) groups based on the timing of vaccination. This type of bias is unavoidable in real-world datasets, but it must be corrected in order to enable a fair comparison between the two groups.
 
 Simulated Test Dataset with Minimal Bias
 
