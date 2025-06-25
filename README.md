@@ -61,11 +61,11 @@ _________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20real%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
 <br>
-<br>Uses a simulated minbias dataset to test whether the method compensates for mortality bias (forced restriction death_day >= last_dose_day). It seems to only partially correct the bias
+<br>Uses a simulated minbias dataset to test whether the method compensates for mortality bias (forced restriction death_day >= last_dose_day). It seems to only partially correct the bias should theoretically run horizontally at about 1 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20minbias%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
 <br>
-<br>Uses simulated nobias dataset to test methode (no constraint death_day >= last_dose_day)
+<br>Uses simulated nobias dataset to test methode (no constraint death_day >= last_dose_day). should theoretically run horizontally at about 1
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/CA%29%20Landmark%20adjust%20resampling%20truncation%20bias/CA%29%20nobias%20RR_AGEBIN_Landmark_Comparison.png width="1280" height="auto">
 <br>
