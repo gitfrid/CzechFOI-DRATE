@@ -60,6 +60,14 @@ Speculation for AG 70:
 
     The true causal effect may be small or null after adjusting for confounding/timing.
     
+ 
+<br>
+Lecture slides and notes:
+[Many universities provide lecture notes on G-estimation](https://www.biostat.washington.edu/sites/default/files/files/courses/594/G-Estimation)
+
+[Tutorial and overview on G-estimation and structural nested models](https://www.stat.columbia.edu/~gelman/arm/examples/robins/robins.pdf)
+(This is a well-cited tutorial by Robins and colleagues.)
+ 
  _________________________________________
 
 <br>
