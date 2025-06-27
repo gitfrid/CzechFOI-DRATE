@@ -3,8 +3,9 @@ import numpy as np
 import os
 
 # === Parameters ===
-INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
+# INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_Vesely_106_SIMULATED.csv"
+INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_TWO_DEATHRATES_10X_Vesely_106_SIMULATED.csv"
 OUTPUT_DIR = r"C:\CzechFOI-DRATE\intervals_per_agebin"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -78,6 +79,6 @@ for idx, row in df.iterrows():
 intervals_df = pd.DataFrame(all_intervals)
 
 # Save all intervals to a single CSV
-output_file = os.path.join(OUTPUT_DIR, "minbias_interval_person_all_ages_Vesely_106_202403141131.csv")
+output_file = os.path.join(OUTPUT_DIR, "minbias_TWO_DEATHRATES_10X_interval_person_all_ages_Vesely_106_202403141131.csv")
 intervals_df.to_csv(output_file, index=False)
 print(f"Saved all intervals to {output_file}, rows={len(intervals_df)}")
