@@ -72,11 +72,12 @@ Speculation for AG 70:
 <br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse.**
+<br>-> **has to fix an error Testdata containd not alive individuals I will update the fixed results soon**
 <br>
 <br>Test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X%29%20sim%20MINBIAS%20Population_and_Deaths_Trends_with_All_Doses.png width="1280" height="auto">
-<br>The stacked events for the MINBIAS simulation AG 70
+<br>The stacked events for the MINBIAS simulation AG 70 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X)%20sim%20MINBIAS%20DoseAligned_Stacked_Normalized_Deaths.png width="1280" height="auto">
 <br>
