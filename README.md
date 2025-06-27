@@ -27,7 +27,7 @@ The actual dates of death were not changed or removed; only the assignment of va
 ________________________________________________
 
 ### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
-<br>-> **Has to fix an error in G-Estimate Testdata they containd not alive individuals I will update the fixed results soon**
+<br>-> **Has to fix an error in [G) generate interval data per person.py The Testdata containd not alive individuals I will update the fixed results soon**
 <br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
 <br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
 <br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
