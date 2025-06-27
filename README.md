@@ -27,7 +27,7 @@ The actual dates of death were not changed or removed; only the assignment of va
 ________________________________________________
 
 ### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
-
+<br>-> **Has to fix an error in G-Estimate Testdata they containd not alive individuals I will update the fixed results soon**
 <br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
 <br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
 <br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
@@ -72,7 +72,6 @@ Speculation for AG 70:
 <br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse.**
-<br>-> **has to fix an error Testdata containd not alive individuals I will update the fixed results soon**
 <br>
 <br>Test dataset sim_MINBIAS_Vesely_106_SIMULATED.csv
 <br>
