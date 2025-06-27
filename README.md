@@ -101,6 +101,24 @@ Speculation for AG 70:
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/X)%20event_stacking/X)%20sim%20NOBIAS%20DoseAligned_Stacked_Normalized_Deaths.png width="1280" height="auto">
 <br>
 
+_________________________________________
+
+### R ) Baseline-Normalized Excess Mortality Analysis Aligned to Vaccination Doses methode for Hypothsis 1
+
+<br>Phyton script [R) EM baseline_rate_norm.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/R%29%20EM%20baseline_rate_norm.py)
+<br>
+<br>Attempt to replicate the method from the original R code using Python.
+<br>The R implementation from @henjin256 is documented here: https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
+<br>
+<br>**So far, I have not been able to reproduce the same results — likely due to differences in input data or logical errors in this Python version**.
+Since Python struggles with merging massive tables (e.g., billions of rows) efficiently, so I tried to use a different input format compared to the R version.
+The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person_all_ages_Vesely_106_202403141131.csv" was generated from the original Czech Veselý dataset using the script: 
+[G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
+<br>
+
+<br>**The result below is not plausible and does not match with @henjin256's r-code result** 
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/R)%20EM%20Baseline%20Rate%20Normalization/R)%20EM%20Baseline%20Rate%20Normalization.png width="1280" height="auto">
+<br>
 
 _________________________________________
 
