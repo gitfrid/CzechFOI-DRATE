@@ -41,26 +41,6 @@ ________________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/G%29%20G-estimation/G%20plot%20minbias.png width="800" height="auto">
 <br>
 
-Speculation for AG 70:
-1. Standard Cox Suggests Strong Benefit:
-
-    The Cox regression consistently estimates HR ≈ 0.72, meaning ~28% lower hazard of death for vaccinated.
-
-    But this is the observed association, which still include biases (like immortal time bias etc. Hypothsis 1).
-
-2. G-Estimation Controls for Bias:
-
-    In real data, ψ = 0.148 ⇒ HR ≈ exp(–0.148) ≈ 0.862 ⇒ more modest benefit (~14%).
-
-    In minbias data, ψ ≈ 0 ⇒ HR ≈ 1.0 ⇒ no effect after adjusting for time-dependent confounding.
-
-    Conclusion: The real data shows a more protective effect than the minbias data — suggesting that:
-
-    The apparent Cox benefit of vaccination in real data is likely inflated due to bias.
-
-    The true causal effect may be small or null after adjusting for confounding/timing.
-   
-<br>G-estimation see Tutorial by Robins and colleagues.
  _________________________________________
 
 <br>
