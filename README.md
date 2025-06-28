@@ -41,26 +41,6 @@ ________________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/G%29%20G-estimation/G%20plot%20minbias.png width="800" height="auto">
 <br>
 
-Speculation for AG 70:
-1. Standard Cox Suggests Strong Benefit:
-
-    The Cox regression consistently estimates HR ≈ 0.72, meaning ~28% lower hazard of death for vaccinated.
-
-    But this is the observed association, which still include biases (like immortal time bias etc. Hypothsis 1).
-
-2. G-Estimation Controls for Bias:
-
-    In real data, ψ = 0.148 ⇒ HR ≈ exp(–0.148) ≈ 0.862 ⇒ more modest benefit (~14%).
-
-    In minbias data, ψ ≈ 0 ⇒ HR ≈ 1.0 ⇒ no effect after adjusting for time-dependent confounding.
-
-    Conclusion: The real data shows a more protective effect than the minbias data — suggesting that:
-
-    The apparent Cox benefit of vaccination in real data is likely inflated due to bias.
-
-    The true causal effect may be small or null after adjusting for confounding/timing.
-   
-<br>G-estimation see Tutorial by Robins and colleagues.
  _________________________________________
 
 <br>
@@ -110,7 +90,8 @@ _________________________________________
 <br>Attempt to replicate the method from the original R code using Python.
 <br>The R implementation from @henjin256 is documented here: https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
 <br>
-<br>**So far, I have not been able to reproduce the same results — likely due to methodical or logical errors in my Python code**.
+<br>**So far, I have not been able to reproduce the same results — likely due to methodical or logical errors in my Python code or method**.
+<br>**If the R code is translated one-by-one to Python, it results in huge tables that the RAM or Python cannot handle, so I had to adjusted the method**
 Since Python struggles with merging massive tables (e.g., billions of rows) efficiently, I tried to use a different input format compared to the R version.
 The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person_all_ages_Vesely_106_202403141131.csv" was generated from the original Czech Veselý dataset using the script: 
 [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py) 
@@ -337,7 +318,7 @@ _________________________________________
 _________________________________________
 ### J) Bias Study ratio vx_uvx.py
 
-<br>Phyton script [J) Bias Study ratio vx_uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.png) 
+<br>Phyton script [J) Bias Study ratio vx_uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/J%29%20Bias%20Study%20ratio%20vx_uvx.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.html)
 <br>
 <br>This script simulates uniform death risk over time to test bias in survival analysis. It compares static vs. time-dependent vaccinated/unvaccinated classification, computes death rates and 1st derivatives, Kaplan-Meier curves, and Cox models, and visualizes the results in an interactive Plotly HTML plot.
