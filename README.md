@@ -337,7 +337,7 @@ _________________________________________
 _________________________________________
 ### J) Bias Study ratio vx_uvx.py
 
-<br>Phyton script [J) Bias Study ratio vx_uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.png) 
+<br>Phyton script [J) Bias Study ratio vx_uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/J%29%20Bias%20Study%20ratio%20vx_uvx.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/J%29%20Bias%20study%20ratio%20vx%20uvx/J%29%20Bias%20study%20ratio%20over%20time%20%20TimeDependend.html)
 <br>
 <br>This script simulates uniform death risk over time to test bias in survival analysis. It compares static vs. time-dependent vaccinated/unvaccinated classification, computes death rates and 1st derivatives, Kaplan-Meier curves, and Cox models, and visualizes the results in an interactive Plotly HTML plot.
