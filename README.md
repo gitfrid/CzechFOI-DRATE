@@ -110,7 +110,8 @@ _________________________________________
 <br>Attempt to replicate the method from the original R code using Python.
 <br>The R implementation from @henjin256 is documented here: https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
 <br>
-<br>**So far, I have not been able to reproduce the same results — likely due to methodical or logical errors in my Python code**.
+<br>**So far, I have not been able to reproduce the same results — likely due to methodical or logical errors in my Python code or method**.
+<br>**If the R code is translated one-by-one to Python, it results in huge tables that the RAM or Python cannot handle, so I had to adjusted the method**
 Since Python struggles with merging massive tables (e.g., billions of rows) efficiently, I tried to use a different input format compared to the R version.
 The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person_all_ages_Vesely_106_202403141131.csv" was generated from the original Czech Veselý dataset using the script: 
 [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py) 
