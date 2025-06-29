@@ -116,8 +116,8 @@ The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person
 <br>**If the method correctly adjusts for bias, the vaccinated excess mortality curve should be flat, at or near 0%**
 <br>Since that is not observed:
     <br> - The MINBIAS test data or the underlying assumptions are incorrect,
-    <br> - The method was not implemented correctly
-    <br> - There are errors in the code
+    <br> - The method was not reproduced correctly
+    <br> - There are errors in my code
 <br>If none of these, then the method probably does not properly adjust for the bias as intended in the project goals
 <br>
 <br>
