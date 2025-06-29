@@ -106,11 +106,11 @@ The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person
 
 ### AA) Tried again to reproduce the methode used by @henjin256's r-code
 
-https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
-https://sars2.net/czech.html#Bucket_analysis
+<br>https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
+<br>https://sars2.net/czech.html#Bucket_analysis
 
 <br>Creates buckets csv file for AGE 70 : [AA) generate bucket csv.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20generate%20bucket%20csv.py) (takes 1,5 hours only for AG 70)
- <br>The plot file : [AA) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py)
+ <br>Create the plot file : [AA) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py)
 <br>
 <br>**If the method correctly adjusts for bias, the vaccinated excess mortality curve should be flat, at or near 0%**
 <br>Since that is not observed:
