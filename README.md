@@ -32,6 +32,7 @@ ________________________________________________
 <br>
 <br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
 <br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
+<br>Phyton script [GA) G-estimation on interval data per person all age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/GA%29%20G-estimation%20on%20interval%20data%20per%20person%20all%20age.py)
 <br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
 <br>
 <br>real world dataset Vesely_106_202403141131.csv 
