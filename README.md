@@ -19,9 +19,8 @@ _________________________________________
 
 Simulated Test Dataset with Minimal Bias
 
-A simulated dataset was created in which all individuals within an age group share an identical, constant, and homogeneous risk of death.
-For vaccinated individuals, complete vaccination schedules (consisting of doses 1 through 7 based on the real-world schedule) were randomly reassigned to individuals until the condition was met that the day of death occurred on or after the day of the last dose.
-The actual dates of death were not changed or removed; only the assignment of vaccination dates was adjusted through repeated resampling to ensure this temporal condition was satisfied.
+A synthetic dataset was generated in which individuals within each age group share a constant and homogeneous risk of death, estimated from real-world age-specific death rates. Death dates were simulated independently of vaccination status.
+Real-world vaccination schedules (dose sets) were then reassigned randomly to individuals within the same age group, ensuring that each individual's entire dose schedule occurred on or before their simulated death date. No actual death dates were removed or altered—only the assignment of dose dates was adjusted to maintain this temporal consistency. This approach minimizes bias while preserving realistic dose timing patterns.
 <br>
 <br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 ________________________________________________
