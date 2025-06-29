@@ -6,12 +6,48 @@ import plotly.graph_objects as go
 import warnings
 from lifelines.exceptions import ConvergenceWarning
 
+# G-Estimation of Vaccine Effect (ψ) Using Cox Time-Varying Model
+
+# This script performs G-estimation of the vaccine effect (psi, ψ) by age group
+# based on time-varying Cox proportional hazards models. It adjusts follow-up time
+# based on vaccination status and optimizes psi to minimize the absolute value of
+# the estimated coefficient for vaccination.
+
+# Key functionalities:
+# - Reads interval-based survival data for individuals.
+# - Cleans data to remove multiple death entries per person.
+# - Computes Cox regression coefficients for varying ψ values.
+# - Optimizes ψ using bounded scalar minimization.
+# - Plots estimated ψ for each age group and saves to HTML.
+
+# === Description of input format ===
+# Each interval includes:
+# - person_id: Row index (unique individual ID)
+# - age: Age in REFERENCE_YEAR
+# - start_day: Interval start in days since START_DATE
+# - end_day: Interval end in days since START_DATE
+# - dose_number: 0 = pre-vaccination interval, 1+ = intervals after respective vaccine doses
+# - event: 1 if death occurred at interval end (and death day is before censor day), 0 if censored/alive
+#
+# Censoring occurs at the maximum observed death day in the dataset (END_DAY).
+#
+# Each individual contributes one or more intervals:
+# - Alive, no doses: one interval [0, censor_day], dose_number=0, event=0
+# - Alive, with doses: multiple intervals split at doses, last ends at censor_day, event=0
+# - Died, no doses: one interval [0, death_day], dose_number=0, event=1
+# - Died, with doses: multiple intervals split at doses, last ends at death_day, event=1
+#
+# This output format supports standard survival analysis frameworks such as Cox regression.
+
+
 # === Configuration ===
 AGE_FILTER = [70]  # Set to [] or None to process all ages
+# Choose one input CSV depending on whether you're using real or simulated data
 # INPUT_CSV = r"C:\CzechFOI-DRATE\intervals_per_agebin\AG70_real_intervals_for_cox_model_Vesely_106_202403141131.csv"
 # INPUT_CSV = r"C:\CzechFOI-DRATE\intervals_per_agebin\AG70_sim_minbias_intervals_for_cox_model_Vesely_106_202403141131.csv"
 INPUT_CSV = r"C:\CzechFOI-DRATE\intervals_per_agebin\real_intervals_for_cox_model_Vesely_106_202403141131.csv"
 
+# Output paths for results
 OUTPUT_HTML_PSI = r"C:\CzechFOI-DRATE\Plot Results\G) G-estimation\minbias_g_estimation_phi_plots.html"
 OUTPUT_HTML_COMPARISON = r"C:\CzechFOI-DRATE\Plot Results\G) G-estimation\minbias_g_estimation_comparison_plot.html"
 
@@ -24,11 +60,13 @@ try:
 except Exception as e:
     raise RuntimeError(f"Failed to load CSV file: {e}")
 
+# Ensure required columns are present
 required_cols = {'person_id', 'age', 'start_day', 'end_day', 'dose_number', 'event'}
 missing = required_cols - set(df_all.columns)
 if missing:
     raise ValueError(f"Missing required columns in CSV: {missing}")
 
+# Convert column types and drop invalid rows
 df_all['person_id'] = df_all['person_id'].astype(str)
 df_all['start_day'] = pd.to_numeric(df_all['start_day'], errors='coerce')
 df_all['end_day'] = pd.to_numeric(df_all['end_day'], errors='coerce')
@@ -36,7 +74,7 @@ df_all['dose_number'] = pd.to_numeric(df_all['dose_number'], errors='coerce')
 df_all['age'] = pd.to_numeric(df_all['age'], errors='coerce')
 df_all.dropna(subset=['person_id', 'start_day', 'end_day', 'dose_number', 'age'], inplace=True)
 
-# Fix multiple death intervals per person_id
+# === Fix multiple death intervals per person ===
 multi_death_counts = df_all[df_all['event'] == 1].groupby('person_id').size()
 multi_death_ids = multi_death_counts[multi_death_counts > 1].index
 if len(multi_death_ids) > 0:
@@ -48,21 +86,20 @@ if len(multi_death_ids) > 0:
         .first()
         .reset_index()
     )
-    # Remove all death intervals for these person_ids
     df_all = df_all[~((df_all['person_id'].isin(multi_death_ids)) & (df_all['event'] == 1))]
-    # Add back only the earliest death interval per person_id
     df_all = pd.concat([df_all, deaths_to_keep], ignore_index=True)
     print("✅ Multiple death intervals cleaned.\n")
 else:
     print("\nNo multiple death intervals found.\n")
 
+# Set data types and calculate max observed follow-up day
 df_all['event'] = df_all['event'].astype(int)
 df_all['vaccinated'] = (df_all['dose_number'] > 0).astype(int)
 MAX_OBSERVED_DAY = df_all.loc[df_all['event'] == 1, 'end_day'].max()
-MAX_OBSERVED_DAY = MAX_OBSERVED_DAY +1 
+MAX_OBSERVED_DAY = MAX_OBSERVED_DAY + 1
 print(f"MAX_OBSERVED_DAY: {MAX_OBSERVED_DAY}")
 
-# Summary stats
+# === Print basic summary statistics ===
 total_pop_start = df_all['person_id'].nunique()
 death_ids = df_all[df_all['event'] == 1]['person_id'].unique()
 total_deaths = len(death_ids)
@@ -72,21 +109,20 @@ print(f"Total POP START: {total_pop_start:,}")
 print(f"Total POP END:   {total_pop_end:,}")
 print(f"Deaths:          {total_deaths:,}")
 
+# === Core function to compute absolute Cox coefficient for given psi ===
 def compute_cox_coef(psi, df):
     print(f"\n[compute_cox_coef] Computing for psi={psi:.6f}")
     df_adj = df.copy()
     
-    # Adjust end_day with exp(-psi * vaccinated)
+    # Adjust follow-up time based on psi and vaccination status
     df_adj['end_day_adj'] = df_adj['start_day'] + (df_adj['end_day'] - df_adj['start_day']) * np.exp(-psi * df_adj['vaccinated'])
-    
-    # Clip adjusted end_day to MAX_OBSERVED_DAY
     df_adj['end_day_adj'] = np.minimum(df_adj['end_day_adj'], MAX_OBSERVED_DAY)
 
-    # Fix zero-length intervals by adding small epsilon if start_day == end_day_adj
+    # Avoid zero-length intervals
     same_time = df_adj['start_day'] == df_adj['end_day_adj']
     if same_time.any():
         print(f"  Warning: zero-length intervals found at indices {df_adj[same_time].index.tolist()}")
-        df_adj.loc[same_time, 'end_day_adj'] += 0.5  # add half a day to avoid zero-length intervals
+        df_adj.loc[same_time, 'end_day_adj'] += 0.5
 
     n_events = df_adj['event'].sum()
     vacc_var = df_adj['vaccinated'].var()
@@ -96,6 +132,7 @@ def compute_cox_coef(psi, df):
         print("  No events or no vaccinated variance - returning NaN")
         return np.nan
 
+    # Try increasing max_steps if convergence fails
     for max_steps in [50, 100, 200]:
         try:
             ctv = CoxTimeVaryingFitter(penalizer=0.0)
@@ -118,6 +155,7 @@ def compute_cox_coef(psi, df):
     print("  Cox fit failed for all max_steps attempts, returning NaN")
     return np.nan
 
+# === Objective function: minimize absolute Cox coefficient ===
 def objective(psi, df):
     coef = compute_cox_coef(psi, df)
     if np.isfinite(coef):
@@ -127,11 +165,13 @@ def objective(psi, df):
         print(f"  Objective: coef is not finite (NaN or Inf)")
         return np.inf
 
+# === Optimization wrapper ===
 def g_estimate_cox(df):
     print(f"\n[g_estimate_cox] Starting optimization for age group with {df['person_id'].nunique()} unique persons")
     print("  Sample data:")
     print(df.head(5))
 
+    # Test a few psi values before optimization
     for test_psi in [-0.05, 0, 0.05]:
         print(f"\n  Testing compute_cox_coef at psi={test_psi}")
         val = compute_cox_coef(test_psi, df)
@@ -150,6 +190,7 @@ def g_estimate_cox(df):
         print("\n  Optimization failed or returned non-finite result.")
         return np.nan
 
+# === Run g-estimation for each age group ===
 results = []
 print("\nStarting processing of age groups...")
 
@@ -179,7 +220,7 @@ for age in age_groups:
 
 df_result = pd.DataFrame(results).sort_values('age')
 
-# Plot: Estimated ψ by Age
+# === Plot: Estimated ψ by Age ===
 fig_psi = go.Figure()
 fig_psi.add_trace(go.Scatter(
     x=df_result['age'],
@@ -195,7 +236,6 @@ fig_psi.update_layout(
     template='plotly_white'
 )
 
-# Save figure to HTML
+# Save plot to HTML
 fig_psi.write_html(OUTPUT_HTML_PSI)
-
 print(f"\nPlot saved to: {OUTPUT_HTML_PSI}")
