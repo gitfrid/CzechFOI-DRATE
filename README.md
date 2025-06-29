@@ -85,7 +85,7 @@ ________________________________________________
 
 _________________________________________
 
-### R ) Baseline-Normalized Excess Mortality Analysis Aligned to Vaccination Doses methode for Hypothsis 1
+### R) Baseline-Normalized Excess Mortality Analysis Aligned to Vaccination Doses methode for Hypothsis 1
 
 <br>Phyton script [R) EM baseline_rate_norm.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/R%29%20EM%20baseline_rate_norm.py)
 <br>
@@ -102,6 +102,25 @@ The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person
 
 <br>**The result below is not plausible and does not match with @henjin256's r-code result** 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/R)%20EM%20Baseline%20Rate%20Normalization/R)%20EM%20Baseline%20Rate%20Normalization.png width="1280" height="auto">
+<br>
+
+### AA) Tried again to reproduce the methode used by @henjin256's r-code
+
+https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
+https://sars2.net/czech.html#Bucket_analysis
+
+<br>Creates buckets csv file: [AA) generate bucket csv.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20generate%20bucket%20csv.py)
+<br>The plot file : [AA) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py)
+<br>
+<br>**if the method correctly adjusts for bias, the vaccinated excess mortality curve should be flat, at or near 0%**
+<br>Since that is not observed:
+    <br> - The MINBIAS test data or the underlying assumptions are incorrect,
+    <br> - The method was not implemented correctly
+    <br> - There are errors in the code
+<br>If none of these, then the method probably does not properly adjust for the bias as intended in the project goals
+<br>
+<br>
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AA)%20record%20level%20mort/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.png width="1280" height="auto">
 <br>
 
 _________________________________________
