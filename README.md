@@ -106,7 +106,7 @@ The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person
 
 ### AA) Time-since-first-dose person-time stratification
 
-**Tried again to reproduce the methode used by @henjin256's r-code**
+**Tried again to reproduce the methode used by r-code @henjin256's**
 <br>https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
 <br>https://sars2.net/czech.html#Bucket_analysis
 
