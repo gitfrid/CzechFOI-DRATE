@@ -45,11 +45,37 @@ ________________________________________________
 <br>
 
  _________________________________________
-### AB) Test Script to check the Cox time variing methode bias correction - Hypothsis 1
-<br>->
+### AB) Testscript for Cox time variing methode bias correction - Hypothsis 1
+<br>
+Impact of Dose Assignment Strategy on bias correction and Estimated Mortality Risk
+
+Objective
+To assess how different vaccine dose assignment strategies affect estimated hazard ratios (HRs) for mortality.
+
+Methods
+Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
+
+    Case 1: Real-world Czech FOI data Simulated doses (death must follow dose) - random homogen constant death probability.
+
+    Case 2: Simulated doses with flat random assignment (death must follow dose) - random homogen constant death probability.
+
+    Case 3: Simulated doses with a bell-curve distribution(death must follow dose) - random homogen constant death probability.
+
+Results
+HRs varied by dose assignment logic, highlighting the impact of immortal time bias.
+
+    Case 1: Simulation based on Real-world dataset parameter produced HR ≈ 0.51 (≈49% mortality reduction), but the cause of this effect requires further investigation.
+    
+    Case 2: Flat random assignment yielded HRs ≈ 1.0 (no effect).
+
+    Case 3: Bell-curve distribution logic led to inflated HRs (>1.0).    
+
+Conclusion
+Dose classification strategies strongly influence observed vaccine effectiveness. Careful control of timing and classification is essential to avoid bias in survival analyses.
+
 <br>
 <br>
-<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
+<br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
 <br>
 <br>
  _________________________________________
