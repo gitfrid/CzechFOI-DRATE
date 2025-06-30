@@ -28,8 +28,8 @@ ________________________________________________
 
 ### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
 <br>Test using simulated dataset based on real world paramter created by "NK) generate csv simulate deaths minimal bias.py". 
-<br>Tried to evaluate whether the G-estimation (psi) method could correct for the bias, but struggled with error messages.
-<br>By using parameter of "Cox time variing methode" below it schould probably work.
+<br>Tried to evaluate whether the G-estimation (psi) method could correct for bias, but struggled with error messages.
+<br>By using the parameter of "Cox time variing methode" below it schould probably work.
 <br>
 <br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
 <br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
