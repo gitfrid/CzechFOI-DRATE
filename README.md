@@ -56,7 +56,9 @@ Methods
 Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
 
     Case 1: Real-world Czech FOI data Simulated doses (death must follow dose) - random homogen constant death probability.
-
+            The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" based on the real world data
+            (see Project GOAL).
+            
     Case 2: Simulated doses with flat random assignment (death must follow dose) - random homogen constant death probability.
 
     Case 3: Simulated doses with a bell-curve distribution(death must follow dose) - random homogen constant death probability.
