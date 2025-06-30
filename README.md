@@ -23,6 +23,7 @@ A synthetic dataset was generated in which individuals within each age group sha
 Real-world vaccination schedules (dose sets) were then reassigned randomly to individuals within the same age group, ensuring that each individual's entire dose schedule occurred on or before their simulated death date. No actual death dates were removed or altered—only the assignment of dose dates was adjusted to maintain this temporal consistency. This approach minimizes bias while preserving realistic dose timing patterns.
 <br>
 <br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
+<br>30.06.2025 changed constraint death day >= last dose day to death day > last dose day  as cox can't handle zero intervalls where start = stop 
 ________________________________________________
 
 ### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
