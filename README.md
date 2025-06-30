@@ -38,7 +38,7 @@ ________________________________________________
 <br>
 
 _________________________________________
-### AB) Testscript for Cox time variing methode bias correction - Hypothsis 1
+### AB) Testscript for Cox time variing methode bias correction AGE 70 - Hypothsis 1
 <br>
 Impact of Dose Assignment Strategy on bias correction and Estimated Mortality Risk
 
@@ -47,14 +47,15 @@ To assess how different vaccine dose assignment strategies affect estimated haza
 
 Methods
 Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
+All three simulated with random homogen and constant death probability for the whole population.
 
-    Case 1: Real-world Czech FOI data Simulated doses (death must follow dose) - random homogen constant death probability.
+    Case 1: Simulated doses with the same distribution as the Real-world Czech FOI data (death must follow dose) - 
             The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" based on the real world data
             (see Project GOAL).
             
-    Case 2: Simulated doses with flat random assignment (death must follow dose) - random homogen constant death probability.
+    Case 2: Simulated doses with flat random assignment (death must follow dose).
 
-    Case 3: Simulated doses with a bell-curve distribution(death must follow dose) - random homogen constant death probability.
+    Case 3: Simulated doses with a bell-curve distribution(death must follow dose).
 
 Results
 HRs varied by dose assignment logic, highlighting the impact of immortal time bias.
