@@ -46,8 +46,8 @@ Objective
 To assess how different vaccine dose assignment strategies affect estimated hazard ratios (HRs) for mortality and test Bias adjustment.
 
 Methods
-Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
-All three simulated with random homogen and constant death probability for the whole population.
+Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under four scenarios:
+Except Case 1A (Real World), all were simulated assuming a random, homogeneous, and constant death risk across the whole population.
 
     Case 1A: Real-world Czech FOI data (death must follow dose - real world) 
              Uses the Czech freedoem of information request raw dataset Vesely_106_202403141131.csv             
@@ -90,7 +90,7 @@ This table summarizes Cox regression hazard ratios (HR) across four datasets:
 Dose classification strategies strongly influence observed vaccine effectiveness. Careful control of timing and classification is essential to avoid bias in survival analyses.
 **Result of CASE 1B) requires further investigation!!**
 <br>
-<br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
+<br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py) -> [Detailed Results](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AB%29%20Cox%20fair%20compare%20vx%20uvx/AB%29%20Cox%20fair%20compare%20vx%20uvx.txt)
 <br>
 <br>
  _________________________________________
