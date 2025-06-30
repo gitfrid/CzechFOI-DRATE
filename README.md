@@ -122,7 +122,7 @@ _________________________________________
 <br>https://sars2.net/czech.html#Bucket_analysis
 
 <br>Creates buckets csv file for AGE 70 : [AA) generate bucket csv.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20generate%20bucket%20csv.py) (takes 1,5 hours only for AG 70)
- <br>Create the plot file : [AA) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py) .
+ <br>Create the plot file : [AA) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py) Basline uvx.
 <br>
 <br>**If the method correctly adjusts for bias, the vaccinated excess mortality curve should be flat, at or near 0%**
 <br>Since that is not observed:
@@ -131,10 +131,12 @@ _________________________________________
     <br> - There are errors in my code
 <br>**Needs further investigation!**
 <br>Disadvantage of this method: creating bucket files is slow and demands a lot of memory, when using R it's no problem. 
+<br>
+<br>
 <br>Plot below uses only group unvaxed as basline! 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AA)%20record%20level%20mort/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.png width="1280" height="auto">
 <br>
-<br>Create the plot file : [AC) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AC%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py) .
+<br>Create the plot file : [AC) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AC%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py) Basline uvx+vx.
 <br>
 <br>Plot below uses combined basline (group unvaxed + vaxed)! 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20record%20level%20mort/AC%29%20AG70%20sim%20minbias%20record_level_mort_combined_baseline.png width="1280" height="auto">
