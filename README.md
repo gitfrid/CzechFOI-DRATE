@@ -131,6 +131,8 @@ _________________________________________
     <br> - There are errors in my code
 <br>**Needs further investigation!**
 <br>Disadvantage of this method: creating bucket files is slow and demands a lot of memory, when using R it's no problem. 
+<br>
+<br>
 <br>Plot below uses only group unvaxed as basline! 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AA)%20record%20level%20mort/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.png width="1280" height="auto">
 <br>
