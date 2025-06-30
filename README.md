@@ -49,26 +49,46 @@ Methods
 Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
 All three simulated with random homogen and constant death probability for the whole population.
 
-    Case 1: Simulated doses with the same distribution as the Real-world Czech FOI data (death must follow dose) - 
-            The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" (see Project GOAL).
-            It uses the same dose schedule distribution and aproximate same but constant death rate from the Czech-FOI real World Data AGE 70
+    Case 1A: Real-world Czech FOI data (death must follow dose - real world) 
+             Uses the Czech freedoem of information request raw dataset Vesely_106_202403141131.csv             
             
-    Case 2: Simulated doses with flat random assignment (death must follow dose).
+    Case 1B: Simulated doses with the same distribution as the Real-world Czech FOI data (death must follow dose) - 
+             The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" (see Project GOAL).
+             It uses the same dose schedule distribution and aproximate same but constant death rate from the Czech-FOI real World Data AGE 70
+            
+    Case 2:  Simulated doses with flat random assignment (death must follow dose).
 
-    Case 3: Simulated doses with a bell-curve distribution(death must follow dose).
+    Case 3:  Simulated doses with a bell-curve distribution(death must follow dose).
 
-Results
-HRs varied by dose assignment logic, highlighting the impact of immortal time bias.
+Results:
 
-    Case 1: Simulation based on Real-world dataset parameter produced HR ≈ 0.51 (≈49% mortality reduction), but the cause of this effect requires further investigation.
-    
-    Case 2: Flat random assignment yielded HRs ≈ 1.0 (no effect).
+    Cases 1B, 2, and 3 were simulated with uniform risk and should theoretically yield HR ≈ 1, reflecting no vaccine effect
 
-    Case 3: Bell-curve distribution logic led to inflated HRs (>1.0).    
+<br>
+
+### Cox Proportional Hazards Results – Real and Simulated Data
+
+This table summarizes Cox regression hazard ratios (HR) across four datasets:
+
+| Case     | Description                                                       | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                                  |
+|----------|------------------------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|------------------------------------------------|
+| 1A       | Real data – Czech FOI dataset                                    | -0.34    | 0.71        | 29%                | 0.70–0.73    | -27.36  | < 0.005 | 514.18   | <1          | Strong protective effect observed               |
+| 1B       | Simulated deaths (constant risk) + real dose distribution       | -0.28    | 0.75        | 25%                | 0.73–0.77    | -19.84  | < 0.005 | 287.13   | ≈1          | False strong protective effect observed - Bias inflates vaccine effect |
+| 2 (Flat) | Simulated deaths + flat dose distribution                        | -0.04    | 0.96        | 4%                 | 0.93–0.99    | -2.82   | 0.005   | 8.39     | ≈1          | Minimal bias – HR near 1, as expected            |
+| 3 (Bell) | Simulated deaths + bell curve dose distribution (centered doses, early deaths) | +0.28    | 1.33        | -33%               | 1.30–1.37    | +17.94  | < 0.005 | 272.61   | ≈1          | Artificial harm due to reversed timing bias      |
+
+---
+
+**Notes:**  
+- Risk Reduction (%) = (1 - HR) × 100%.  
+- Values > 0 indicate reduced risk (protective effect).  
+- Negative values (like Case 3) indicate increased risk (harm).  
+- Cases 1B, 2, and 3 were simulated with constant death risk; HR close to 1 is expected in absence of real effect.  
+- Case 1B shows bias due to the real dose distribution skew causing a false appearance of protection.
 
 <br>Conclusion
 Dose classification strategies strongly influence observed vaccine effectiveness. Careful control of timing and classification is essential to avoid bias in survival analyses.
-**Result of CASE 1) requires further investigation!!**
+**Result of CASE 1B) requires further investigation!!**
 <br>
 <br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
 <br>
