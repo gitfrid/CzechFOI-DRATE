@@ -43,7 +43,7 @@ _________________________________________
 Impact of Dose Assignment Strategy on bias correction and Estimated Mortality Risk
 
 Objective
-To assess how different vaccine dose assignment strategies affect estimated hazard ratios (HRs) for mortality.
+To assess how different vaccine dose assignment strategies affect estimated hazard ratios (HRs) for mortality and test bias correction.
 
 Methods
 Time-varying Cox regression was used to compare mortality risk between vaccinated and unvaccinated individuals under three scenarios:
