@@ -50,8 +50,8 @@ Time-varying Cox regression was used to compare mortality risk between vaccinate
 All three simulated with random homogen and constant death probability for the whole population.
 
     Case 1: Simulated doses with the same distribution as the Real-world Czech FOI data (death must follow dose) - 
-            The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" based on the real world data
-            (see Project GOAL).
+            The csv dataset was created by "NK) generate csv simulate deaths minimal bias.py" (see Project GOAL).
+            It uses the same dose schedule distribution and aproximate same but constant death rate from the Czech-FOI real World Data AGE 70
             
     Case 2: Simulated doses with flat random assignment (death must follow dose).
 
