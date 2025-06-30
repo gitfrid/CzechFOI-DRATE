@@ -6,6 +6,11 @@ import sys
 # ===============================================================================
 # Simulated Deaths and Dose Assignment Script (Minimal Bias)
 
+# The goal of the script is to simulate vaccination and death data incorporating immortal time and selection bias, 
+# to test whether methods like Cox regression can correctly adjust for these biases 
+# and enable a fair comparison between vaccinated and unvaccinated groups.
+
+
 # This script performs the following steps:
 # 1. Loads Czech vaccination and death records from a CSV file.
 # 2. Parses and standardizes date columns, and calculates age from year of birth.
@@ -19,11 +24,20 @@ import sys
 #    schedule occurs before their simulated death.
 # 6. Outputs a fully simulated dataset with internally consistent vaccination and death records.
 
+
+# Dose assignment:
+
+#    After random death simulation, everyone is unvaccinated (vax_stat == 0).
+#    For each dose sequence per age group:
+#        Only unvaccinated and alive (death day ≥ last dose day or no death day) individuals are considered eligible.
+#        One eligible individual is randomly assigned that dose sequence.
+#        If no eligible candidate is found, the dose sequence remains unassigned (counted as skipped).
+
 # ===============================================================================
 
 # === File paths ===
 INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"  # Input dataset
-OUTPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\sim_MINBIAS_Vesely_106_SIMULATED.csv"  # Output path
+OUTPUT_CSV = r"C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_Vesely_106_202403141131.csv"  # Output path
 
 # === Parameters ===
 START_DATE = pd.Timestamp('2020-01-01')  # Day 0 for time reference
