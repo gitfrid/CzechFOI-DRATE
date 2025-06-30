@@ -14,18 +14,20 @@ import sys
 # This script performs the following steps:
 # 1. Loads Czech vaccination and death records from a CSV file.
 # 2. Parses and standardizes date columns, and calculates age from year of birth.
-# 3. Estimates age-specific death probabilities based on observed death rates.
-# 4. Simulates unconditional death dates per individual using age-specific death probabilities,
+# 3. Estimates age-specific death probabilities based on real observed death rates.
+# 4. Simulates random death dates per individual using age-specific death probabilities,
+#    so individuals has the same constant death probability,
 #    generating random death days uniformly between day 0 and the last observed death day.
 # 5. Assigns real-world dose date patterns (dose sets) to individuals in the simulated dataset
-#    with minimal bias by randomly selecting recipients from those alive on or after the last
+#    by randomly selecting recipients from those alive on or after the last
 #    dose day in each dose set. Each dose set is assigned to a randomly chosen eligible individual
-#    within the same age group who has not already received a dose and for whom the full dose
-#    schedule occurs before their simulated death.
+#    within the same age group who has not already received a dose and for whom the last dose of the set
+#    occurs before their simulated death.
+
 # 6. Outputs a fully simulated dataset with internally consistent vaccination and death records.
 
 
-# Dose assignment:
+# Dose assignment details:
 
 #    After random death simulation, everyone is unvaccinated (vax_stat == 0).
 #    For each dose sequence per age group:
