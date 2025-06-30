@@ -45,6 +45,14 @@ ________________________________________________
 <br>
 
  _________________________________________
+### AB) Test Script to check the Cox time variing methode bias correction - Hypothsis 1
+<br>->
+<br>
+<br>
+<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
+<br>
+<br>
+ _________________________________________
 
 <br>
 
