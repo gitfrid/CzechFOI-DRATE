@@ -115,25 +115,6 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 
 _________________________________________
 
-### R) Baseline-Normalized Excess Mortality Analysis Aligned to Vaccination Doses methode for Hypothsis 1
-
-<br>Phyton script [R) EM baseline_rate_norm.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/R%29%20EM%20baseline_rate_norm.py)
-<br>
-<br>Attempt to replicate the method from the original R code using Python.
-<br>The R implementation from @henjin256 is documented here: https://sars2.net/czech2.html#Excess_mortality_by_weeks_after_vaccination
-<br>
-<br>**So far, I have not been able to reproduce the same results — likely due to methodical or logical errors in my Python code.
-When I translated the R code line-by-line into Python, it produced massive tables that exceeded the capacity of RAM or Python to handle, so I had to adjust the method**
-<br>
-I tried to use a different input format compared to the R version.
-The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person_all_ages_Vesely_106_202403141131.csv" was generated from the original Czech Veselý dataset using the script: 
-[G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py) 
-<br>
-
-<br>**The result below is not plausible and does not match with @henjin256's r-code result** 
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/R)%20EM%20Baseline%20Rate%20Normalization/R)%20EM%20Baseline%20Rate%20Normalization.png width="1280" height="auto">
-<br>
-
 ### AA) Time-since-first-dose person-time stratification
 
 **Tried again to recode the methode used by r-code @henjin256's**
@@ -148,8 +129,8 @@ The used input file "C:\CzechFOI-DRATE\intervals_per_agebin\real_interval_person
     <br> - The MINBIAS test data or the underlying assumptions are incorrect,
     <br> - The method was not reproduced correctly
     <br> - There are errors in my code
-<br>If none of these, then the method probably does not properly adjust for the bias as intended in the project goals
-<br>
+<br>**Needs further investigation!**
+<br>Disadvantage of this method: requires huge bucket files that Python cannot handle efficiently — slow and demands a lot of memory, when using R it's no problem. 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AA)%20record%20level%20mort/AA%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.png width="1280" height="auto">
 <br>
