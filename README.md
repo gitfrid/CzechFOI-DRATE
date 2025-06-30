@@ -92,7 +92,7 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 <br>
 <br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py) -> [Detailed Results](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AB%29%20Cox%20fair%20compare%20vx%20uvx/AB%29%20Cox%20fair%20compare%20vx%20uvx.txt)
 <br>
-<br>
+<br> 
  _________________________________________
 
 <br>
