@@ -1,0 +1,381 @@
+__________________________________________________________________________________________________________________
+
+# CASE 1A : Real-world data — death and dose dates read from the Czech FOI dataset 
+
+PS C:\Users\user> & "C:/Program Files/Python312/python.exe" "c:/CzechFOI-BUCKET/Py Scripts/AB) Cox fair compare vx uvx.py"
+Loading real data from: C:\CzechFOI-BUCKET\TERRA\Vesely_106_202403141131.csv
+Loaded 136224 rows for age 70
+Summary of prepared data:
+vx
+0    136224
+1    113798
+Name: count, dtype: int64
+event
+0    240559
+1      9463
+Name: count, dtype: int64
+
+Data snapshot:
+    id  start  stop  event        vx  age  baseline
+0   49      0   111      0 -0.923884  0.0       0.0
+1   49    111  1095      0  1.082387  0.0       0.0
+2  117      0   103      0 -0.923884  0.0       0.0
+3  117    103  1095      0  1.082387  0.0       0.0
+4  230      0    67      0 -0.923884  0.0       0.0
+5  230     67  1095      0  1.082387  0.0       0.0
+6  280      0   118      0 -0.923884  0.0       0.0
+7  280    118  1095      0  1.082387  0.0       0.0
+8  455      0   138      0 -0.923884  0.0       0.0
+9  455    138  1095      0  1.082387  0.0       0.0
+
+Covariate unique values (scaled):
+vx: min=-0.924, max=1.082
+age: min=0.000, max=0.000
+baseline: min=0.000, max=0.000
+
+Event counts and total per vx group:
+            sum   count
+vx
+-0.923884  3217  133319
+ 1.082387  3432  113796
+
+Missing values per column:
+id          0
+start       0
+stop        0
+event       0
+vx          0
+age         0
+baseline    0
+dtype: int64
+
+Checking for duplicated intervals (id, start, stop):
+Number of duplicated intervals: 0
+
+Checking for zero-duration intervals:
+Number of zero-duration intervals: 0
+
+Event rate by vaccination status:
+           event_rate
+vx
+-0.923884    0.024130
+ 1.082387    0.030159
+
+Trying CoxTimeVaryingFitter with penalizer=0.01 and formula='vx'
+C:\Users\user\AppData\Roaming\Python\Python312\site-packages\lifelines\fitters\cox_time_varying_fitter.py:175: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self._time_fit_was_called = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " UTC"
+Iteration 1: norm_delta = 3.52e-01, step_size = 0.9500, log_lik = -78297.57462, newton_decrement = 3.77e+02, seconds_since_start = 7.6
+Iteration 2: norm_delta = 1.49e-02, step_size = 0.9500, log_lik = -77945.50464, newton_decrement = 8.21e-01, seconds_since_start = 14.9
+Iteration 3: norm_delta = 8.03e-04, step_size = 0.9500, log_lik = -77944.68435, newton_decrement = 2.36e-03, seconds_since_start = 22.3
+Iteration 4: norm_delta = 4.24e-05, step_size = 1.0000, log_lik = -77944.68199, newton_decrement = 5.96e-06, seconds_since_start = 29.6
+Iteration 5: norm_delta = 4.49e-10, step_size = 1.0000, log_lik = -77944.68198, newton_decrement = 6.67e-16, seconds_since_start = 36.8
+Convergence completed after 5 iterations.
+<lifelines.CoxTimeVaryingFitter: fitted with 247115 periods, 133410 subjects, 6649 events>
+         event col = 'event'
+         penalizer = 0.01
+number of subjects = 133410
+ number of periods = 247115
+  number of events = 6649
+partial log-likelihood = -77944.68
+  time fit was run = 2025-06-30 21:43:11 UTC
+
+---
+           coef exp(coef)  se(coef)  coef lower 95%  coef upper 95% exp(coef) lower 95% exp(coef) upper 95%
+covariate
+vx        -0.34      0.71      0.01           -0.36           -0.31                0.70                0.73
+
+           cmp to      z      p  -log2(p)
+covariate
+vx           0.00 -27.36 <0.005    545.16
+---
+Partial AIC = 155891.36
+log-likelihood ratio test = 705.79 on 1 df
+-log2(p) of ll-ratio test = 514.18
+
+
+__________________________________________________________________________________________________________________
+
+# CASE 1B : Simualted minbias dataset with real world dose schedule and constant homogen death rate at aproximate real world Level
+
+PS C:\Users\user> # sim_MINBIAS_deathday_gr_doseday_Vesely_106_202403141131.csv
+PS C:\Users\user> & "C:/Program Files/Python312/python.exe" "c:/CzechFOI-BUCKET/Py Scripts/AB) Cox fair compare vx uvx.py"
+Loading real data from: C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_deathday_gr_doseday_Vesely_106_202403141131.csv
+Loaded 136224 rows for age 70
+Summary of prepared data:
+vx
+0    136224
+1    113799
+Name: count, dtype: int64
+event
+0    240396
+1      9627
+Name: count, dtype: int64
+
+Data snapshot:
+        id  start  stop  event        vx  age  baseline
+0  9307419      0    77      0 -0.925552  0.0       0.0
+1  9307419     77  1095      0  1.080436  0.0       0.0
+2  9307420      0  1095      0 -0.925552  0.0       0.0
+3  9307421      0   129      0 -0.925552  0.0       0.0
+4  9307421    129  1095      0  1.080436  0.0       0.0
+5  9307422      0   123      0 -0.925552  0.0       0.0
+6  9307422    123  1095      0  1.080436  0.0       0.0
+7  9307423      0  1095      0 -0.925552  0.0       0.0
+8  9307424      0   166      0 -0.925552  0.0       0.0
+9  9307424    166  1095      0  1.080436  0.0       0.0
+
+Covariate unique values (scaled):
+vx: min=-0.926, max=1.080
+age: min=0.000, max=0.000
+baseline: min=0.000, max=0.000
+
+Event counts and total per vx group:
+            sum   count
+vx
+-0.925552  3471  132840
+ 1.080436  2863  113797
+
+Missing values per column:
+id          0
+start       0
+stop        0
+event       0
+vx          0
+age         0
+baseline    0
+dtype: int64
+
+Checking for duplicated intervals (id, start, stop):
+Number of duplicated intervals: 0
+
+Checking for zero-duration intervals:
+Number of zero-duration intervals: 0
+
+Event rate by vaccination status:
+           event_rate
+vx
+-0.925552    0.026129
+ 1.080436    0.025159
+
+Trying CoxTimeVaryingFitter with penalizer=0.01 and formula='vx'
+C:\Users\user\AppData\Roaming\Python\Python312\site-packages\lifelines\fitters\cox_time_varying_fitter.py:175: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self._time_fit_was_called = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " UTC"
+Iteration 1: norm_delta = 6.03e-01, step_size = 0.9500, log_lik = -74572.57155, newton_decrement = 1.10e+03, seconds_since_start = 10.6
+Iteration 2: norm_delta = 5.81e-02, step_size = 0.9500, log_lik = -73599.29649, newton_decrement = 1.40e+01, seconds_since_start = 20.2
+Iteration 3: norm_delta = 3.49e-03, step_size = 0.9500, log_lik = -73585.27779, newton_decrement = 4.94e-02, seconds_since_start = 31.0
+Iteration 4: norm_delta = 1.86e-04, step_size = 1.0000, log_lik = -73585.22853, newton_decrement = 1.27e-04, seconds_since_start = 46.5
+Iteration 5: norm_delta = 6.31e-09, step_size = 1.0000, log_lik = -73585.22840, newton_decrement = 1.45e-13, seconds_since_start = 62.6
+Convergence completed after 5 iterations.
+<lifelines.CoxTimeVaryingFitter: fitted with 246637 periods, 132931 subjects, 6334 events>
+         event col = 'event'
+         penalizer = 0.01
+number of subjects = 132931
+ number of periods = 246637
+  number of events = 6334
+partial log-likelihood = -73585.23
+  time fit was run = 2025-06-30 21:50:20 UTC
+
+---
+           coef exp(coef)  se(coef)  coef lower 95%  coef upper 95% exp(coef) lower 95% exp(coef) upper 95%
+covariate
+vx        -0.54      0.58      0.01           -0.56           -0.52                0.57                0.60
+
+           cmp to      z      p  -log2(p)
+covariate
+vx           0.00 -46.30 <0.005       inf
+---
+Partial AIC = 147172.46
+log-likelihood ratio test = 1974.69 on 1 df
+-log2(p) of ll-ratio test = inf
+
+__________________________________________________________________________________________________________________
+
+# CASE 2: Simulated doses assigned with a flat random Distribution
+
+PS C:\Users\user> & "C:/Program Files/Python312/python.exe" "c:/CzechFOI-BUCKET/Py Scripts/AB) Cox fair compare vx uvx.py"
+Simulating population and dose data...
+Assigning doses flat and random between day 350-500
+Simulated dose assignment skipped 3753 times due to constraints
+Simulated dose assignment assigned 105847 doses out of 109600 target
+Summary of prepared data:
+vx
+0    137000
+1    105847
+Name: count, dtype: int64
+event
+0    236028
+1      6819
+Name: count, dtype: int64
+
+Data snapshot:
+   id  start  stop  event        vx  age  baseline
+0   0      0   448      0 -0.879002  0.0       0.0
+1   0    448  1095      0  1.137653  0.0       0.0
+2   1      0  1095      0 -0.879002  0.0       0.0
+3   2      0   390      0 -0.879002  0.0       0.0
+4   2    390  1095      0  1.137653  0.0       0.0
+5   3      0   494      0 -0.879002  0.0       0.0
+6   3    494  1095      0  1.137653  0.0       0.0
+7   4      0   472      0 -0.879002  0.0       0.0
+8   4    472  1095      0  1.137653  0.0       0.0
+9   5      0   441      0 -0.879002  0.0       0.0
+
+Covariate unique values (scaled):
+vx: min=-0.879, max=1.138
+age: min=0.000, max=0.000
+baseline: min=0.000, max=0.000
+
+Event counts and total per vx group:
+            sum   count
+vx
+-0.879002  3396  136993
+ 1.137653  3416  105847
+
+Missing values per column:
+id          0
+start       0
+stop        0
+event       0
+vx          0
+age         0
+baseline    0
+dtype: int64
+
+Checking for duplicated intervals (id, start, stop):
+Number of duplicated intervals: 0
+
+Checking for zero-duration intervals:
+Number of zero-duration intervals: 0
+
+Event rate by vaccination status:
+           event_rate
+vx
+-0.879002    0.024790
+ 1.137653    0.032273
+
+Trying CoxTimeVaryingFitter with penalizer=0.01 and formula='vx'
+C:\Users\user\AppData\Roaming\Python\Python312\site-packages\lifelines\fitters\cox_time_varying_fitter.py:175: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self._time_fit_was_called = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " UTC"
+Iteration 1: norm_delta = 2.34e-02, step_size = 0.9500, log_lik = -80397.97337, newton_decrement = 1.74e+00, seconds_since_start = 22.7
+Iteration 2: norm_delta = 1.31e-03, step_size = 0.9500, log_lik = -80396.23646, newton_decrement = 5.41e-03, seconds_since_start = 45.3
+Iteration 3: norm_delta = 6.61e-05, step_size = 0.9500, log_lik = -80396.23106, newton_decrement = 1.37e-05, seconds_since_start = 70.9
+Iteration 4: norm_delta = 3.48e-06, step_size = 1.0000, log_lik = -80396.23105, newton_decrement = 3.43e-08, seconds_since_start = 97.1
+Iteration 5: norm_delta = 3.06e-12, step_size = 1.0000, log_lik = -80396.23105, newton_decrement = 2.65e-20, seconds_since_start = 123.9
+Convergence completed after 5 iterations.
+<lifelines.CoxTimeVaryingFitter: fitted with 242840 periods, 136993 subjects, 6812 events>
+         event col = 'event'
+         penalizer = 0.01
+number of subjects = 136993
+ number of periods = 242840
+  number of events = 6812
+partial log-likelihood = -80396.23
+  time fit was run = 2025-06-30 21:54:15 UTC
+
+---
+           coef exp(coef)  se(coef)  coef lower 95%  coef upper 95% exp(coef) lower 95% exp(coef) upper 95%
+covariate
+vx         0.02      1.03      0.01           -0.00            0.05                1.00                1.05
+
+           cmp to    z    p  -log2(p)
+covariate
+vx           0.00 1.86 0.06      4.00
+---
+Partial AIC = 160794.46
+log-likelihood ratio test = 3.48 on 1 df
+-log2(p) of ll-ratio test = 4.01
+
+__________________________________________________________________________________________________________________
+
+# CASE 3: Simulated doses assigned using a bell curve (normal distribution centered within the dose window). 
+
+PS C:\Users\user> & "C:/Program Files/Python312/python.exe" "c:/CzechFOI-BUCKET/Py Scripts/AB) Cox fair compare vx uvx.py"
+Simulating population and dose data...
+Assigning doses by bell curve between day 350-500
+Simulated dose assignment skipped 0 times due to constraints
+Simulated dose assignment assigned 109600 doses out of 109600 target
+Summary of prepared data:
+vx
+0    137000
+1    109600
+Name: count, dtype: int64
+event
+0    239781
+1      6819
+Name: count, dtype: int64
+
+Data snapshot:
+   id  start  stop  event        vx  age  baseline
+0   0      0   472      0 -0.894450  0.0       0.0
+1   0    472  1095      0  1.118005  0.0       0.0
+2   1      0   420      0 -0.894450  0.0       0.0
+3   1    420  1095      0  1.118005  0.0       0.0
+4   2      0   446      0 -0.894450  0.0       0.0
+5   2    446  1095      0  1.118005  0.0       0.0
+6   3      0   394      0 -0.894450  0.0       0.0
+7   3    394  1095      0  1.118005  0.0       0.0
+8   4      0  1095      0 -0.894450  0.0       0.0
+9   5      0   409      0 -0.894450  0.0       0.0
+
+Covariate unique values (scaled):
+vx: min=-0.894, max=1.118
+age: min=0.000, max=0.000
+baseline: min=0.000, max=0.000
+
+Event counts and total per vx group:
+            sum   count
+vx
+-0.894450  3296  136993
+ 1.118005  3516  109600
+
+Missing values per column:
+id          0
+start       0
+stop        0
+event       0
+vx          0
+age         0
+baseline    0
+dtype: int64
+
+Checking for duplicated intervals (id, start, stop):
+Number of duplicated intervals: 0
+
+Checking for zero-duration intervals:
+Number of zero-duration intervals: 0
+
+Event rate by vaccination status:
+           event_rate
+vx
+-0.894450     0.02406
+ 1.118005     0.03208
+
+Trying CoxTimeVaryingFitter with penalizer=0.01 and formula='vx'
+C:\Users\user\AppData\Roaming\Python\Python312\site-packages\lifelines\fitters\cox_time_varying_fitter.py:175: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  self._time_fit_was_called = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S") + " UTC"
+Iteration 1: norm_delta = 1.87e-02, step_size = 0.9500, log_lik = -80397.97337, newton_decrement = 1.03e+00, seconds_since_start = 28.4
+Iteration 2: norm_delta = 1.04e-03, step_size = 0.9500, log_lik = -80396.94728, newton_decrement = 3.14e-03, seconds_since_start = 67.7
+Iteration 3: norm_delta = 5.23e-05, step_size = 0.9500, log_lik = -80396.94414, newton_decrement = 7.95e-06, seconds_since_start = 92.6
+Iteration 4: norm_delta = 2.76e-06, step_size = 1.0000, log_lik = -80396.94413, newton_decrement = 1.99e-08, seconds_since_start = 113.1
+Iteration 5: norm_delta = 2.18e-12, step_size = 1.0000, log_lik = -80396.94413, newton_decrement = 1.24e-20, seconds_since_start = 135.5
+Convergence completed after 5 iterations.
+<lifelines.CoxTimeVaryingFitter: fitted with 246593 periods, 136993 subjects, 6812 events>
+         event col = 'event'
+         penalizer = 0.01
+number of subjects = 136993
+ number of periods = 246593
+  number of events = 6812
+partial log-likelihood = -80396.94
+  time fit was run = 2025-06-30 21:58:17 UTC
+
+---
+           coef exp(coef)  se(coef)  coef lower 95%  coef upper 95% exp(coef) lower 95% exp(coef) upper 95%
+covariate
+vx         0.02      1.02      0.01           -0.01            0.05                0.99                1.05
+
+           cmp to    z    p  -log2(p)
+covariate
+vx           0.00 1.43 0.15      2.72
+---
+Partial AIC = 160795.89
+log-likelihood ratio test = 2.06 on 1 df
+-log2(p) of ll-ratio test = 2.72
