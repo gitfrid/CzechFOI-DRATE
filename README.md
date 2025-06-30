@@ -72,7 +72,6 @@ HRs varied by dose assignment logic, highlighting the impact of immortal time bi
 
 Conclusion
 Dose classification strategies strongly influence observed vaccine effectiveness. Careful control of timing and classification is essential to avoid bias in survival analyses.
-
 <br>
 <br>
 <br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py)
