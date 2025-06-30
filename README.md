@@ -138,10 +138,10 @@ _________________________________________
 <br>
 <br>Create the plot file : [AC) AG70 sim MINBIAS record_level_mort_vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AC%29%20AG70%20sim%20MINBIAS%20record_level_mort_vx%20uvx.py) Basline uvx+vx.
 <br>
-<br>Plot of simulated minbias dataset AGE 70 should actually be a horizontal line at 0% - uses combined basline (group unvaxed + vaxed)! 
+<br>Plot of simulated minbias dataset AGE 70 should be a horizontal line at 0% - uses combined basline (group unvaxed + vaxed)! 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC)%20record%20level%20mort/AC%29%20AG70%20sim%20minbias%20record_level_mort_combined_baseline.png width="1280" height="auto">
 <br>
-<br>Plot of real world Czech-FOI datasetuses combined basline (group unvaxed + vaxed)! 
+<br>Plot of real world Czech-FOI dataset - uses combined basline (group unvaxed + vaxed)! 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AC%29%20record%20level%20mort/AC)%20AG70%20real%20record_level_mort_combined_baseline.png width="1280" height="auto">
 <br>
 
