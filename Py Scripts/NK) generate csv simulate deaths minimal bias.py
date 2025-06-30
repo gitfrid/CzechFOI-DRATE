@@ -5,41 +5,35 @@ import sys
 
 # ===============================================================================
 # Simulated Deaths and Dose Assignment Script (Minimal Bias)
-
-# The goal of the script is to simulate vaccination and death data incorporating immortal time and selection bias, 
-# to test whether methods like Cox regression can correctly adjust for these biases 
-# and enable a fair comparison between vaccinated and unvaccinated groups.
-
-
+#
 # This script performs the following steps:
 # 1. Loads Czech vaccination and death records from a CSV file.
 # 2. Parses and standardizes date columns, and calculates age from year of birth.
-# 3. Estimates age-specific death probabilities based on real observed death rates.
-# 4. Simulates random death dates per individual using age-specific death probabilities,
-#    so individuals has the same constant death probability,
+# 3. Estimates age-specific death probabilities based on observed death rates.
+# 4. Simulates unconditional death dates per individual using age-specific death probabilities,
 #    generating random death days uniformly between day 0 and the last observed death day.
 # 5. Assigns real-world dose date patterns (dose sets) to individuals in the simulated dataset
-#    by randomly selecting recipients from those alive on or after the last
+#    with minimal bias by randomly selecting recipients from those alive strictly after the last
 #    dose day in each dose set. Each dose set is assigned to a randomly chosen eligible individual
-#    within the same age group who has not already received a dose and for whom the last dose of the set
-#    occurs before their simulated death.
-
+#    within the same age group who has not already received a dose and for whom the full dose
+#    schedule occurs before their simulated death (death day > last dose day).
 # 6. Outputs a fully simulated dataset with internally consistent vaccination and death records.
-
-
-# Dose assignment details:
-
+#
+# Dose assignment:
+#
 #    After random death simulation, everyone is unvaccinated (vax_stat == 0).
 #    For each dose sequence per age group:
-#        Only unvaccinated and alive (death day ≥ last dose day or no death day) individuals are considered eligible.
+#        Only unvaccinated and alive (death day > last dose day or no death day) individuals are considered eligible.
 #        One eligible individual is randomly assigned that dose sequence.
 #        If no eligible candidate is found, the dose sequence remains unassigned (counted as skipped).
-
+#
+#
+#   30.06 changed constraint death day >= last dose day to death day > last dose day  as cox can't handle zero intervalls where start = stop 
 # ===============================================================================
 
 # === File paths ===
 INPUT_CSV = r"C:\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv"  # Input dataset
-OUTPUT_CSV = r"C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_Vesely_106_202403141131.csv"  # Output path
+OUTPUT_CSV = r"C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_deathday_gr_doseday_Vesely_106_202403141131.csv"  # Output path
 
 # === Parameters ===
 START_DATE = pd.Timestamp('2020-01-01')  # Day 0 for time reference
@@ -111,8 +105,8 @@ def assign_doses_per_age(age, dose_sets, death_day_arr, rng_seed):
         valid_days = np.array(to_day_number(pd.Series(valid_dates)))
         last_dose_day = valid_days.max()
 
-        # Select only alive and unvaccinated individuals
-        alive_mask = np.isnan(death_day_arr) | (death_day_arr >= last_dose_day)
+        # Select only alive and unvaccinated individuals with death_day > last_dose_day
+        alive_mask = np.isnan(death_day_arr) | (death_day_arr > last_dose_day)  # Strictly greater
         eligible_mask = (vax_stat_arr == 0) & alive_mask
 
         eligible_indices = np.where(eligible_mask)[0]
