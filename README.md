@@ -68,14 +68,16 @@ Results:
 
 ### Cox Proportional Hazards Results – Real and Simulated Data
 
+
 This table summarizes Cox regression hazard ratios (HR) across four datasets:
 
-| Case     | Description                                                       | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                                  |
-|----------|------------------------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|------------------------------------------------|
-| 1A       | Real data – Czech FOI dataset                                    | -0.34    | 0.71        | 29%                | 0.70–0.73    | -27.36  | < 0.005 | 514.18   | <1          | Strong protective effect observed               |
-| 1B       | Simulated deaths (constant risk) + real dose distribution       | -0.28    | 0.75        | 25%                | 0.73–0.77    | -19.84  | < 0.005 | 287.13   | ≈1          | False strong protective effect observed - Bias inflates vaccine effect |
-| 2 (Flat) | Simulated deaths + flat dose distribution                        | -0.04    | 0.96        | 4%                 | 0.93–0.99    | -2.82   | 0.005   | 8.39     | ≈1          | Minimal bias – HR near 1, as expected            |
-| 3 (Bell) | Simulated deaths + bell curve dose distribution (centered doses, early deaths) | +0.28    | 1.33        | -33%               | 1.30–1.37    | +17.94  | < 0.005 | 272.61   | ≈1          | Artificial harm due to reversed timing bias      |
+
+| Case&nbsp;&nbsp;&nbsp;&nbsp; | Description                                         | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                             |
+|-----------|-----------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|--------------------------------------------|
+| 1A        | Real data – Czech FOI dataset                       | -0.34    | 0.71        | 29%                | 0.70–0.73    | -27.36  | < 0.005 | 514.18   | <1          | Strong protective effect observed          |
+| 1B        | Simulated deaths + real dose distribution| -0.28    | 0.75     | 25%         | 0.73–0.77          | -19.84       | < 0.005 | 287.13  | ≈1       | False protective effect observed - Bias inflated         |
+| 2 (Flat)  | Simulated deaths + flat dose distribution           | -0.04    | 0.96        | 4%                 | 0.93–0.99    | -2.82   | 0.005   | 8.39     | ≈1          | Minimal bias – HR near 1, as expected      |
+| 3 (Bell)  | Simulated deaths + bell curve dose distribution     | +0.28    | 1.33        | -33%               | 1.30–1.37    | +17.94  | < 0.005 | 272.61   | ≈1          | Artificial harm due to reversed timing bias|
 
 ---
 
