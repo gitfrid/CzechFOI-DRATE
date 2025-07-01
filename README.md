@@ -93,6 +93,22 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 <br>Phyton script [AB) Cox fair compare vx uvx.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/AB%29%20Cox%20fair%20compare%20vx%20uvx.py) -> [Detailed Results](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AB%29%20Cox%20fair%20compare%20vx%20uvx/AB%29%20Cox%20fair%20compare%20vx%20uvx.txt)
 <br>
 <br> 
+<br> 
+### Histogram death distribution
+<br> 
+<br>Case 1A real data 
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20sim%20minbias%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case1A.png width="1280" height="auto">
+<br>
+<br>Case 1B simulated deaths with real dose schedule
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20sim%20minbias%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case1B.png width="1280" height="auto">
+<br>
+<br>Case 2 simulated deaths flat 
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case2.png width="1280" height="auto">
+<br>
+<br>Case 3 simulated deaths bell cureve 
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case3.png width="1280" height="auto">
+<br>
+
  _________________________________________
 
 <br>
