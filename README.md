@@ -24,18 +24,6 @@ Real-world vaccination schedules (dose sets) were then reassigned randomly to in
 <br>
 <br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 <br>30.06.2025 changed constraint death day >= last dose day to death day > last dose day  as cox can't handle zero intervalls where start = stop 
-________________________________________________
-
-### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
-<br>Test using simulated dataset based on real world paramter created by "NK) generate csv simulate deaths minimal bias.py". 
-<br>Tried to evaluate whether the G-estimation (psi) method could correct for bias, but struggled with error messages.
-<br>By using the parameter of "Cox time variing methode" below it should probably work.
-<br>
-<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
-<br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
-<br>Phyton script [GA) G-estimation on interval data per person all age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/GA%29%20G-estimation%20on%20interval%20data%20per%20person%20all%20age.py)
-<br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
-<br>
 
 _________________________________________
 ### AB) Testscript for Cox time variing methode bias adjustment AGE 70 - Hypothsis 1
@@ -334,6 +322,18 @@ ________________________________________
 <br> 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF)%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm%20sim%20no%20bias.png width="1280" height="auto">
+<br>
+________________________________________________
+
+### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
+<br>Test using simulated dataset based on real world paramter created by "NK) generate csv simulate deaths minimal bias.py". 
+<br>Tried to evaluate whether the G-estimation (psi) method could correct for bias, but struggled with error messages.
+<br>By using the parameter of "Cox time variing methode" below it should probably work.
+<br>
+<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
+<br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
+<br>Phyton script [GA) G-estimation on interval data per person all age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/GA%29%20G-estimation%20on%20interval%20data%20per%20person%20all%20age.py)
+<br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
 <br>
 
 _________________________________________
