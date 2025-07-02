@@ -31,8 +31,9 @@ import plotly.graph_objs as go
 
 # === File Paths ===
 # INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\sim_HR_NOBIAS_Vesely_106_202403141131.csv" # -> simulated testdata to check script for bias
-INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv" # -> real czech-FOI data
-OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\ZE) vx uvx norm\ZE) vx uvx norm.html" 
+INPUT_CSV = r"C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_deathday_gr_doseday_Vesely_106_202403141131.csv"
+#INPUT_CSV = r"C:\github\CzechFOI-DRATE\TERRA\Vesely_106_202403141131.csv" # -> real czech-FOI data
+OUTPUT_HTML = r"C:\github\CzechFOI-DRATE\Plot Results\ZE) vx uvx norm\ZE) sim minbias deathday gr doseday Vesely vx uvx norm.html" 
 
 # === Parameters ===
 START_DATE = pd.Timestamp('2020-01-01')
