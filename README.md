@@ -24,18 +24,6 @@ Real-world vaccination schedules (dose sets) were then reassigned randomly to in
 <br>
 <br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 <br>30.06.2025 changed constraint death day >= last dose day to death day > last dose day  as cox can't handle zero intervalls where start = stop 
-________________________________________________
-
-### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
-<br>Test using simulated dataset based on real world paramter created by "NK) generate csv simulate deaths minimal bias.py". 
-<br>Tried to evaluate whether the G-estimation (psi) method could correct for bias, but struggled with error messages.
-<br>By using the parameter of "Cox time variing methode" below it should probably work.
-<br>
-<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
-<br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
-<br>Phyton script [GA) G-estimation on interval data per person all age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/GA%29%20G-estimation%20on%20interval%20data%20per%20person%20all%20age.py)
-<br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
-<br>
 
 _________________________________________
 ### AB) Testscript for Cox time variing methode bias adjustment AGE 70 - Hypothsis 1
@@ -72,21 +60,21 @@ Results:
 This table summarizes Cox regression hazard ratios (HR) across four datasets:
 
 
-| Case&nbsp;&nbsp;&nbsp;&nbsp; | Description                                         | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                             |
-|-----------|-----------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|--------------------------------------------|
-| 1A        | Real data – Czech FOI dataset                       | -0.34    | 0.71        | 29%                | 0.70–0.73    | -27.36  | < 0.005 | 514.18   | <1          | Strong protective effect observed          |
-| 1B        | Simulated deaths + real dose distribution| -0.28    | 0.75     | 25%         | 0.73–0.77          | -19.84       | < 0.005 | 287.13  | ≈1       | False protective effect observed - Bias inflated         |
-| 2 (Flat)  | Simulated deaths + flat dose distribution           | -0.04    | 0.96        | 4%                 | 0.93–0.99    | -2.82   | 0.005   | 8.39     | ≈1          | Minimal bias – HR near 1, as expected      |
-| 3 (Bell)  | Simulated deaths + bell curve dose distribution     | +0.28    | 1.33        | -33%               | 1.30–1.37    | +17.94  | < 0.005 | 272.61   | ≈1          | Artificial harm due to reversed timing bias|
+| Case&nbsp;&nbsp;&nbsp;&nbsp; | Description                      | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                                 |
+|-----------|-----------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|------------------------------------------------|
+| 1A        | Real data – Czech FOI dataset                       | -0.34    | 0.71        | 29%                | 0.70–0.73    | -27.36  | < 0.005 | 514.18   | <1          | Strong protective effect observed              |
+| 1B        | Simulated deaths + real dose distribution           | -0.28    | 0.75        | **25%**            | 0.73–0.77    | -19.84  | < 0.005 | 287.13   | **≈1**      | **False protective effect observed Bias inflated**|
+| 2 (Flat)  | Simulated deaths + flat dose distribution           | -0.04    | 0.96        | 4%                 | 0.93–0.99    | -2.82   | 0.005   | 8.39     | ≈1          | Minimal bias – HR near 1, as expected          |
+| 3 (Bell)  | Simulated deaths + bell curve dose distribution     | +0.28    | 1.33        | **-33%**           | 1.30–1.37    | +17.94  | < 0.005 | 272.61   | **≈1**      | **Artificial harm due to reversed timing bias**|
 
 ---
 
 **Notes:**  
 - Risk Reduction (%) = (1 - HR) × 100%.  
 - Values > 0 indicate reduced risk (protective effect).  
-- Negative values (like Case 3) indicate increased risk (harm).  
-- Cases 1B, 2, and 3 were simulated with constant death risk; HR close to 1 is expected in absence of real effect.  
-- Case 1B shows bias due to the real dose distribution skew causing a false appearance of protection.
+- **Negative values (like Case 3) indicate increased risk (harm).**  
+- Cases 1B, 2, and 3 were simulated with constant death risk; HR≈1 is expected in absence of real effect.  
+- **Case 1B shows bias due to the real dose distribution skew causing a false appearance of protection.**
 
 <br>Conclusion
 Dose classification strategies strongly influence observed vaccine effectiveness. Careful control of timing and classification is essential to avoid bias in survival analyses.
@@ -119,7 +107,7 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 <br>Plots generated by Phyton script [X) event_stacking.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/X%29%20event_stacking.py) . Here you can [Download the interactive htmls](https://github.com/gitfrid/CzechFOI-DRATE/tree/main/Plot%20Results/X%29%20event_stacking)
 <br>
 <br>
-<br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, as illustrated below.
+<br>**Plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias (Case 1B obove), as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse.**
 <br>
@@ -334,6 +322,18 @@ ________________________________________
 <br> 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF)%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm%20sim%20no%20bias.png width="1280" height="auto">
+<br>
+________________________________________________
+
+### G) G-estimate and Cox time variing methode to compensate for bias - Hypothsis 1
+<br>Test using simulated dataset based on real world paramter created by "NK) generate csv simulate deaths minimal bias.py". 
+<br>Tried to evaluate whether the G-estimation (psi) method could correct for bias, but struggled with error messages.
+<br>By using the parameter of "Cox time variing methode" below it should probably work.
+<br>
+<br>Phyton script [G) generate interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20generate%20interval%20data%20per%20person.py)
+<br>Phyton script [G) G-estimation on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20G-estimation%20on%20interval%20data%20per%20person.py)
+<br>Phyton script [GA) G-estimation on interval data per person all age.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/GA%29%20G-estimation%20on%20interval%20data%20per%20person%20all%20age.py)
+<br>Phyton script [G) cox on interval data per person.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/G%29%20cox%20on%20interval%20data%20per%20person.py)
 <br>
 
 _________________________________________
