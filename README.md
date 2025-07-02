@@ -114,7 +114,7 @@ ________________________________________________
 <br>To test for bias, the plot below shows a simulated dataset where all individuals have the same constant mortality risk — uniform across age groups and over time, at approximately real-world levels. Individuals were then randomly assigned to vaccinated or unvaccinated groups, using real-world vaccination schedules. Critically, deaths were only allowed to occur after vaccination — reflecting a real-world constraint. This introduces immortal time bias, which can create the false impression that vaccination offers protection, even when mortality risk is identical for all. As a reminder: in this simulation, everyone has the same baseline risk of death. But if group assignment is not random — as in real-world data — it introduces bias.
 <br>
 <br>**The bias makes the normalized mortality rate of the unvaccinated (UVX) group appear artificially much worse!**
-<br>**The result needs further investigation if the script code is correct!**
+<br>**The result needs further investigation to verify!**
 <br>
 <br>Uses sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 <br>[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20minbias%20deathday%20gr%20doseday%20vx%20uvx%20norm.html)
