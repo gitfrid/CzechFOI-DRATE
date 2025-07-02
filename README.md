@@ -120,7 +120,7 @@ ________________________________________________
 <br>[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20minbias%20deathday%20gr%20doseday%20vx%20uvx%20norm.html)
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20nobias%20deathday%20gr%20doseday%20vx%20uvx%20norm.png width="1280" height="auto">
 <br>
-<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias. 
+<br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, **this time ignoring real-world constraints like requiring death to occur after vaccination**, which would introduce selection bias. 
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm%20sim%20no%20bias.png width="1280" height="auto">
 <br>
