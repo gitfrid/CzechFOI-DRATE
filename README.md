@@ -95,7 +95,7 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 <br>Case 2 simulated deaths flat 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case2.png width="1280" height="auto">
 <br>
-<br>Case 3 simulated deaths bell cureve 
+<br>Case 3 simulated deaths bell curve 
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram/AD%29%20Cox%20fair%20compare%20vx%20uvx%20histogram%20case3.png width="1280" height="auto">
 <br>
 
