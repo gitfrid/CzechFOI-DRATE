@@ -101,7 +101,7 @@ Dose classification strategies strongly influence observed vaccine effectiveness
 
 ________________________________________________
 
-### ZF) vx uvx norm
+### ZF) vx uvx norm AGE 70
 
 <br>Phyton script [ZF) vx uvx norm.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/ZF%29%20vx%20uvx%20norm.py) 
 <br> [Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20vx%20uvx%20norm.html)
