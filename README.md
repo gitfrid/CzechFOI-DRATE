@@ -110,14 +110,15 @@ ________________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF)%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm.png width="1280" height="auto">
 <br>
-<br>**The plot below requires further investigation (uses same datafile as CASE 1B cox above)!!**
 <br>
-<br>**To test for bias - the plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, causing a false appearance of protection , as illustrated below.
+<br>To test for bias, the plot below shows a simulated dataset where all individuals have the same constant mortality risk — uniform across age groups and over time, at approximately real-world levels. Individuals were then randomly assigned to vaccinated or unvaccinated groups, using real-world vaccination schedules. Critically, deaths were only allowed to occur after vaccination — reflecting a real-world constraint. This introduces immortal time bias, which can create the false impression that vaccination offers protection, even when mortality risk is identical for all. As a reminder: in this simulation, everyone has the same baseline risk of death. But if group assignment is not random — as in real-world data — it introduces bias.
 <br>
-<br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the unvaccinated (UVX) group looks much worse!**
+<br>**The bias makes the normalized mortality rate of the unvaccinated (UVX) group appear artificially much worse!**
+<br>**The result needs further investigation if the script code is correct!**
 <br>
+<br>Uses sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
+<br>[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20minbias%20deathday%20gr%20doseday%20vx%20uvx%20norm.html)
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20nobias%20deathday%20gr%20doseday%20vx%20uvx%20norm.png width="1280" height="auto">
-<br>
 <br>
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias. 
 <br>
