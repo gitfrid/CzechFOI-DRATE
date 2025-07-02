@@ -110,11 +110,11 @@ ________________________________________________
 <br>
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF)%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm.png width="1280" height="auto">
 <br>
-<br>**To test for bias (Case 1B Cox above) - the plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, as illustrated below.
+<br>**To test for bias (Case 1B Cox above) - the plot of simulated dataset below assuming a homogeneous, uniform, and time-invariant mortality rate across age groups (at about real world level). Afterward Individuals were randomly assigned to vaccinated or unvaccinated cohorts, with real-world dosing schedules applied. Enforcing that death could only occur post-vaccination (real world scenario) inherently introducing immortal time bias, causing a false appearance of protection , as illustrated below.
 <br>
 <br>As a reminder, every individual in the homogeneous population below has the same constant mortality risk. If group assignment is non-random (as occurs in the real world), this introduces bias, making the normalized mortality rate of the UVX group looks much worse!**
 <br>
-<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF)%20vx%20uvx%20norm/ZF)%20vx%20uvx%20norm%20sim%20no%20bias.png width="1280" height="auto">
+<img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%96%20vx%20uvx%20norm/ZF%96%20sim%20nobias%20deathday%20gr%20doseday%20vx%20uvx%20norm.png width="1280" height="auto">
 <br>
 <br>
 <br>To test for bias, I run the same code on simulated data with a uniform, constant death rate across ages and time. I then **afterwards** split into vaccinated and unvaccinated groups, ignoring real-world constraints like requiring death to occur after vaccination, which would introduce selection bias. 
