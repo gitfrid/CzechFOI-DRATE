@@ -116,7 +116,7 @@ ________________________________________________
 <br>**The bias makes the normalized mortality rate of the unvaccinated (UVX) group appear artificially much worse!**
 <br>**The result needs further investigation to verify!**
 <br>
-<br>Uses sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
+<br>Uses dsimulated dataset sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 <br>[Download interactive html](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20minbias%20deathday%20gr%20doseday%20vx%20uvx%20norm.html)
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZF%29%20vx%20uvx%20norm/ZF%29%20sim%20nobias%20deathday%20gr%20doseday%20vx%20uvx%20norm.png width="1280" height="auto">
 <br>
