@@ -58,7 +58,7 @@ Results:
 
 
 This table summarizes Cox regression hazard ratios (HR) across four datasets:
-
+ 
 
 | Case&nbsp;&nbsp;&nbsp;&nbsp; | Description                      | β (coef) | HR = exp(β) | Risk Reduction (%) | 95% CI (HR)  | z       | p-value | −log₂(p) | Expected HR | Interpretation                                 |
 |-----------|-----------------------------------------------------|----------|-------------|--------------------|--------------|---------|---------|----------|-------------|------------------------------------------------|
