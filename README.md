@@ -527,7 +527,7 @@ _________________________________________
 <img src=https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Plot%20Results/ZG)%20dowhy%20doses%20vs%20death/ZG%29%20sim%20no%20bias%20doses_vs_deaths_dowhy_zoom.png width="1280" height="auto"> 
 <br>
 _________________________________________
-### S) 
+### S) By calculating the difference between unvaccinated and vaccinated groups (uvx - vx), external influences should largely cancel out, isolating the effect of the vaccine.
 
 <br>Phyton script [S) diff death dose agebin.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/S%29%20diff%20death%20dose%20agebin.py) 
 <br>
