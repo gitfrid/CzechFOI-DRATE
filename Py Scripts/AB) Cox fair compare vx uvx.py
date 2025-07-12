@@ -54,6 +54,8 @@ Three scenarios are analyzed:
 DOSE_SCHEDULE = 1  # 1, 2, or 3 as per your specification
 FILE_PATH = r"C:\CzechFOI-BUCKET\TERRA\sim_MINBIAS_Vesely_106_202403141131.csv"
 REFERENCE_DATE = datetime(2021, 1, 1)
+REFERENCE_YEAR = 2023
+
 AG70 = 70
 T_MAX = 1095
 np.random.seed(42)
@@ -129,7 +131,7 @@ if DOSE_SCHEDULE == 1 and os.path.isfile(FILE_PATH):
     # Case 1: Read real data from CSV (like USE_REAL_DATA=True before)
     print(f"Loading real data from: {FILE_PATH}")
     df_csv = pd.read_csv(FILE_PATH, low_memory=False)
-    df_csv["age"] = 2021 - df_csv["Rok_narozeni"]
+    df_csv["age"] = REFERENCE_YEAR - df_csv["Rok_narozeni"]
     df_csv = df_csv[df_csv["age"] == AG70].copy()
     print(f"Loaded {len(df_csv)} rows for age {AG70}")
 
