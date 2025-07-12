@@ -25,6 +25,7 @@ Real-world vaccination schedules (dose sets) were then reassigned randomly to in
 <br>sim_MINBIAS_Vesely_106_SIMULATED.csv created by [NK) generate csv simulate deaths minimal bias.py](https://github.com/gitfrid/CzechFOI-DRATE/blob/main/Py%20Scripts/NK%29%20generate%20csv%20simulate%20deaths%20minimal%20bias.py)
 <br>30.06.2025 changed constraint death day >= last dose day to death day > last dose day  as cox can't handle zero intervalls where start = stop 
 
+[**CzechFOI-DRATE_EXAM project for further investigations**](https://github.com/gitfrid/CzechFOI-DRATE_EXAM/blob/main/README.md)
 _________________________________________
 ### AB) Testscript for Cox time variing methode bias adjustment AGE 70 - Hypothsis 1
 <br>
