@@ -1,8 +1,7 @@
 # CzechFOI-DRATE
 
 CzechFOI-DRATE: Exploring ways to minimize bias when dividing real-world data into two groups (vaccinated vx /unvaccinated uvx)
-
-
+As soon as science has resolved this issue, I will delete the hypotheses. If I live to see that day
 _________________________________________
 
 ### Hypothesis 1 - [ CzechFOI-DRATE-NOBIAS repository](https://github.com/gitfrid/CzechFOI-DRATE-NOBIAS): <br><br>It is impossible to perfectly and fairly compare vaccinated (VX) and unvaccinated (UVX) groups — either by measurement or mathematically — when vaccination is time-dependent and not random. <br>This remains true if both groups have the same homogen individual constant death rates.
